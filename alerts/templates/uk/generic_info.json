@@ -1,0 +1,9 @@
+{
+  "id": "generic_info",
+  "title": "{emoji} {level} · {symbol}",
+  "body_lines": [
+    "score {score}",
+    "{reasons_block}"
+  ],
+  "action_line": "<b>→ {action_label}:</b> {action_text}"
+}

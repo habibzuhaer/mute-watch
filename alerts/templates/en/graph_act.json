@@ -1,0 +1,10 @@
+{
+  "id": "graph_act",
+  "title": "{emoji} GRAPH · ACT · {symbol}",
+  "body_lines": [
+    "<b>{score}/100</b> · {signal_kind}",
+    "→ {match_entity} · {direction}",
+    "{reasons_block}"
+  ],
+  "action_line": "<b>→ {action_label}:</b> {action_text}"
+}

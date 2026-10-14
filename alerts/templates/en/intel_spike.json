@@ -1,0 +1,9 @@
+{
+  "id": "intel_spike",
+  "title": "{emoji} INTEL · SPIKE · {symbol}",
+  "body_lines": [
+    "chain {chain} · tx={tx_n} · wallets={wallet_n}",
+    "{reasons_block}"
+  ],
+  "action_line": "<b>→ {action_label}:</b> {action_text}"
+}

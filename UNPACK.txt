@@ -1,0 +1,50 @@
+# MUTE — запуск з папки Documents
+
+## Що покласти в Documents
+
+```
+Documents/
+  MUTE-termix.tar.gz
+```
+
+(після першого запуску з’являться також `MUTE/`, `UNPACK.sh`, `START_FROM_DOCUMENTS.sh`)
+
+Шляхи Documents:
+- Linux:          ~/Documents
+- Termux:         ~/storage/shared/Documents   (потрібен termux-setup-storage)
+- Android шлях:   /sdcard/Documents
+
+## Запуск одним скриптом
+
+```bash
+cd ~/Documents
+# або: cd ~/storage/shared/Documents
+
+tar -xzf MUTE-termix.tar.gz
+bash START_FROM_DOCUMENTS.sh
+```
+
+Скрипт:
+1. знайде архів або вже розпаковану `MUTE/`
+2. зробить UNPACK (venv, .env)
+3. запустить dashboard + prep + scanner
+
+Панель: http://127.0.0.1:8765/
+
+## Якщо немає .env у архіві
+
+```bash
+cd ~/Documents/MUTE
+cp .env.example .env
+nano .env
+bash ../START_FROM_DOCUMENTS.sh
+# або: cd ~/Documents && bash START_FROM_DOCUMENTS.sh
+```
+
+## Перепакувати на сервері
+
+```bash
+./scripts/pack_termix.sh --with-secrets   # з ключами, лише приватно
+./scripts/pack_termix.sh                  # без .env
+# → dist/MUTE-termix.tar.gz  → скопіюй у Documents
+```

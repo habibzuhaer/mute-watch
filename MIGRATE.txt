@@ -1,0 +1,60 @@
+MUTE — перенос на другой компьютер
+================================
+
+В архиве: код, addresses, граф-скан (data/graph), seen.sqlite,
+отчёты HTML, шаблон .env.example, и (если упаковали с --with-secrets) ваш .env.
+
+1) Распаковать
+--------------
+  tar -xzf MUTE-migrate-*.tar.gz
+  cd MUTE
+
+2) Секреты
+----------
+  Если в архиве уже есть .env — проверьте ключи, ничего не коммитьте.
+  Если нет:
+    cp .env.example .env
+    # заполните TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID, ETHERSCAN_API_KEY
+  chmod 600 .env
+
+3) Зависимости
+--------------
+  Нужен Python 3.10+ (лучше 3.11–3.13).
+  ./START.sh
+  # или вручную:
+  python3 -m venv .venv
+  .venv/bin/pip install -r requirements.txt
+
+4) Запуск
+---------
+  ./scripts/start_dashboard.sh          # http://127.0.0.1:8765/
+  ./scripts/start_all через панель      # или по отдельности:
+  ./scripts/start.sh                    # DWF monitor
+  ./scripts/start_prep.sh               # prep → Telegram
+  ./scripts/start_scanner.sh            # graph scanner (продолжит с data/graph)
+
+  Статус:  ./scripts/status.sh
+  Стоп:    ./scripts/stop.sh && ./scripts/stop_dashboard.sh && ./scripts/stop_scanner.sh
+
+5) Что уже перенесено
+---------------------
+  addresses/           — watchlist DWF + prep + MM
+  data/graph/          — прогресс скана ~99.9%, edges/signals/matches
+  data/seen.sqlite     — анти-дубли DWF
+  data/prep/seen.sqlite
+  out/dashboard.html   — панель
+  pump_prep/out/       — Hub / graph / deployer HTML
+  crypto_funds_tracker/out/ — mcap JSON + отчёты (чтобы не качать заново)
+
+6) Не переносится (создаётся на месте)
+--------------------------------------
+  .venv/   logs/   *.pid   __pycache__/
+
+7) Важно
+---------
+  • Панель только через http://127.0.0.1:8765/ (не file://)
+  • .env содержит секреты — не выкладывайте архив публично
+  • На новой машине нужен интернет (Etherscan / Telegram / Solana RPC)
+
+Переупаковать с этой машины:
+  ./scripts/pack_migrate.sh --with-secrets

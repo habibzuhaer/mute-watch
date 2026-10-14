@@ -1,0 +1,363 @@
+"""Live Розвідка shell — loads state from /api/rozvidka (not a static stub)."""
+
+from __future__ import annotations
+
+from pathlib import Path
+from typing import Any
+
+from rozvidka.config import OUT_HTML, ROOT
+
+# Single-page app: first paint shows bootstrap, then hydrates from API.
+_HTML = r"""<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Розвідка · MUTE</title>
+<style>
+:root {
+  --bg:#07080b; --panel:#10131a; --panel2:#161b26; --line:#252b38;
+  --text:#e8eaed; --muted:#8b93a7; --accent:#7cb3ff; --ok:#3dd68c;
+  --warn:#e6b84d; --danger:#f07178; --mono:ui-monospace,Menlo,Consolas,monospace;
+}
+* { box-sizing:border-box; }
+body { margin:0; font:14px/1.45 ui-sans-serif,system-ui,sans-serif; background:var(--bg); color:var(--text); }
+header {
+  display:flex; flex-wrap:wrap; gap:12px 20px; align-items:center; justify-content:space-between;
+  padding:14px 20px; border-bottom:1px solid var(--line); background:transparent;
+  position:relative; z-index:1;
+}
+header h1 { margin:0; font-size:18px; font-weight:650; }
+header .sub { color:var(--muted); font-size:12px; }
+.pills { display:flex; gap:8px; flex-wrap:wrap; }
+.pill { font-size:11px; font-weight:700; padding:4px 9px; border-radius:999px; border:1px solid var(--line); color:var(--muted); }
+.pill.ok { color:var(--ok); border-color:rgba(61,214,140,.35); }
+.pill.bad { color:var(--danger); border-color:rgba(240,113,120,.35); }
+.pill.warn { color:#e6c35c; border-color:rgba(230,195,92,.4); }
+.layout { display:grid; grid-template-columns:minmax(0,1.25fr) minmax(300px,.95fr); min-height:calc(100vh - 118px); }
+@media (max-width:980px) { .layout { grid-template-columns:1fr; } }
+main { padding:16px 18px 90px; border-right:1px solid var(--line); }
+aside { padding:16px 14px 90px; background:var(--panel); }
+.sec-h { display:flex; justify-content:space-between; align-items:baseline; margin:0 0 10px; }
+.sec-h h2 { margin:0; font-size:12px; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); }
+.live { color:var(--ok); font-size:12px; font-weight:700; }
+.grid2 { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:14px; }
+@media (max-width:720px) { .grid2 { grid-template-columns:1fr; } }
+.box { background:var(--panel2); border:1px solid var(--line); border-radius:12px; padding:12px; margin-bottom:12px; }
+.box h3 { margin:0 0 8px; font-size:12px; color:var(--muted); text-transform:uppercase; letter-spacing:.05em; }
+.box ul { margin:0; padding-left:16px; }
+.box li { margin:4px 0; }
+.muted { color:var(--muted); }
+.find { border:1px solid var(--line); border-radius:10px; padding:8px 10px; margin-bottom:8px; background:#0d1118; }
+.find-top { display:flex; gap:8px; align-items:center; margin-bottom:4px; }
+.score { font:700 11px var(--mono); color:var(--warn); background:rgba(230,184,77,.12); padding:2px 6px; border-radius:6px; }
+.typ { font-size:11px; color:var(--accent); font-weight:650; }
+.ftitle { font-size:13px; }
+.evt, .turn { background:var(--panel2); border:1px solid var(--line); border-radius:12px; padding:12px; margin-bottom:10px; }
+.evt-top, .turn-h { display:flex; justify-content:space-between; gap:8px; color:var(--muted); font-size:12px; }
+.tag { color:var(--accent); font-weight:650; }
+.cmd { display:block; margin-top:8px; padding:8px 10px; border-radius:8px; background:#0a0c10; color:#9ec1ff; font:12px/1.4 var(--mono); }
+.turn h3 { margin:8px 0 6px; font-size:15px; }
+.turn p { margin:0; color:#c9ced8; }
+.turn.noise { opacity:.7; }
+.tg { color:var(--warn); font-size:12px; margin:8px 0 0; padding-left:18px; }
+.rg { color:var(--accent); font-size:12px; margin:8px 0 0; padding-left:18px; }
+.stats { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin-bottom:12px; }
+.stat { background:var(--panel2); border:1px solid var(--line); border-radius:10px; padding:10px; }
+.stat b { display:block; font-size:18px; }
+.stat span { color:var(--muted); font-size:11px; text-transform:uppercase; }
+table.w { width:100%; border-collapse:collapse; font-size:12px; }
+table.w th, table.w td { text-align:left; padding:6px 4px; border-bottom:1px solid var(--line); }
+table.w .num { text-align:right; font-family:var(--mono); }
+table.w code { font-size:11px; color:var(--accent); }
+.hand.empty { color:var(--muted); }
+.hand.open { color:var(--warn); }
+#graph { width:100%; height:170px; }
+footer {
+  position:fixed; left:0; right:0; bottom:0; display:flex; flex-wrap:wrap; gap:8px 14px;
+  align-items:center; justify-content:space-between; padding:10px 16px;
+  border-top:1px solid var(--line); background:rgba(7,8,11,.96); font-size:12px; color:var(--muted);
+}
+footer nav { display:flex; gap:6px; flex-wrap:wrap; }
+footer a, footer button {
+  appearance:none; border:1px solid var(--line); background:var(--panel2); color:var(--text);
+  border-radius:8px; padding:6px 10px; font:inherit; font-weight:650; text-decoration:none; cursor:pointer;
+}
+footer button.primary { background:#1c2a44; border-color:#3a5080; color:#cfe0ff; }
+footer button:disabled { opacity:.5; cursor:wait; }
+.mini { color:var(--muted); font-size:12px; margin:0 0 10px; }
+.err { color:var(--danger); padding:12px; border:1px solid rgba(240,113,120,.35); border-radius:10px; background:rgba(240,113,120,.08); }
+.boot { color:var(--muted); padding:24px; }
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <h1>Розвідка <span class="sub" id="hdr-sub">loading…</span></h1>
+    <div class="sub" id="hdr-goal">пошук груп і адрес · слідкувати за закономірностями</div>
+  </div>
+  <div class="pills" id="pills"></div>
+</header>
+<div id="root" class="boot">Завантаження /api/rozvidka …</div>
+<footer>
+  <div id="foot-left">—</div>
+  <nav>
+    <a href="/kanban.html">Оркестр</a>
+    <a href="/rozvidka.html">Агент</a>
+    <a href="/">Панель</a>
+    <a href="/reports/signals_hub.html">Hub</a>
+    <button class="primary" id="btn-once" type="button">Оберт зараз</button>
+    <button id="btn-once-fast" type="button">Оберт без LLM</button>
+    <button id="btn-start" type="button">Старт циклу</button>
+    <button id="btn-stop" type="button">Стоп</button>
+  </nav>
+</footer>
+<script>
+const esc = (x) => String(x ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+async function postAction(action) {
+  const r = await fetch('/api/action', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({action}),
+  });
+  return r.json();
+}
+
+function graphSvg(watched, findings) {
+  const items = (watched || []).slice(0, 14);
+  const n = Math.max(items.length, 1);
+  let dots = '';
+  for (let i = 0; i < items.length; i++) {
+    const w = items[i];
+    const ang = (i / n) * Math.PI * 2;
+    const score = Number(w.score || 10);
+    const sil = Number(w.silence_streak || 0);
+    const r = 22 + Math.min(48, score / 2.2);
+    const x = 100 + r * Math.cos(ang);
+    const y = 85 + r * Math.sin(ang);
+    const fill = sil ? '#8b93a7' : (score >= 70 ? '#e6b84d' : '#7cb3ff');
+    dots += `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="4.5" fill="${fill}" opacity=".9"/>`;
+  }
+  const label = `${(watched||[]).length} watch · ${(findings||[]).length} findings`;
+  return `<svg id="graph" viewBox="0 0 200 170" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="100" cy="85" r="68" fill="none" stroke="#252b38"/>
+    <circle cx="100" cy="85" r="42" fill="none" stroke="#252b38"/>
+    <circle cx="100" cy="85" r="18" fill="none" stroke="#252b38"/>
+    ${dots}
+    <text x="100" y="162" text-anchor="middle" fill="#8b93a7" font-size="11">${esc(label)}</text>
+  </svg>`;
+}
+
+function render(snap) {
+  const state = snap.state || {};
+  const turns = snap.turns || [];
+  const actions = snap.actions || [];
+  const findings = snap.findings || [];
+  const regs = snap.regularities || [];
+  const watched = snap.watched || [];
+  const wikiPages = snap.wiki || [];
+  const ollama = snap.ollama || {};
+  const stats = snap.stats || {};
+  const fresh = snap.fresh_signals || [];
+  const rel = snap.relations || {};
+  const relStats = rel.stats || {};
+  const families = rel.top_families || [];
+  const profitTop = rel.profit_top || snap.profit_top || [];
+  const model = snap.model || '';
+  const turnN = state.turn || 0;
+  const hand = state.raised_hand;
+  const silence = state.silence_streak || 0;
+  const ollamaOk = !!ollama.ok;
+
+  document.getElementById('hdr-sub').textContent = `live · ${model}`;
+  document.getElementById('hdr-goal').textContent = snap.goal || '';
+  document.getElementById('pills').innerHTML = `
+    <span class="pill ${ollamaOk ? 'ok' : 'bad'}">ollama ${ollamaOk ? 'online' : 'offline'}</span>
+    <span class="pill ${(snap.health||{}).cycle_status==='ok'?'ok':((snap.health||{}).cycle_status==='interrupted'?'warn':'bad')}">agent ${(snap.health||{}).cycle_status||'?'}</span>
+    <span class="pill">turn ${esc(turnN)}</span>
+    <span class="pill">profit ${esc(relStats.profit_seeds ?? profitTop.length ?? '—')}</span>
+    <span class="pill">families ${esc(relStats.families ?? families.length ?? '—')}</span>
+    <span class="pill">addr-db ${esc(relStats.addresses ?? '—')}</span>
+    <span class="pill">тиша ${esc(silence)}</span>
+    <span class="pill">цикл ${snap.loop_running || (snap.health||{}).running ? 'ON' : 'off'}</span>
+  `;
+
+  const hist = snap.cycle_history || [];
+  const histHtml = hist.length
+    ? hist.slice(0,8).map(c => `<li>#${esc(c.turn)} · ${esc((c.title||'').slice(0,70))} · f${esc(c.findings)}</li>`).join('')
+    : `<li class="muted">немає історії циклів</li>`;
+
+  const famHtml = families.length
+    ? families.slice(0, 8).map(f => `<li><b>${esc(f.short || f.id)}</b> · ${esc(f.size)} addr · pump×${esc(f.pump_n)} · sc ${esc(f.score)}
+        <div class="mini">${(f.tokens||[]).slice(0,5).map(esc).join(', ')}</div></li>`).join('')
+    : `<li class="muted">ще немає сімей — зроби оберт</li>`;
+
+  const profitHtml = profitTop.length
+    ? profitTop.slice(0, 10).map(s => `<li><b>${esc(s.short)}</b> sc ${esc(s.score)} · early×${esc(s.early_token_n)}
+        <div class="mini">${(s.early_tokens||[]).slice(0,6).map(esc).join(', ')}</div></li>`).join('')
+    : `<li class="muted">profit seeds ще немає</li>`;
+
+  const regHtml = regs.length
+    ? regs.slice(0, 10).map(r => `<li><b>${esc(r.weight)}</b> ${esc(r.text)}</li>`).join('')
+    : `<li class="muted">поки немає — натисни «Оберт без LLM»</li>`;
+
+  const findHtml = findings.length
+    ? findings.slice(0, 15).map(f => `
+      <article class="find">
+        <div class="find-top"><span class="score">${esc(f.score)}</span><span class="typ">${esc(f.type)}</span></div>
+        <div class="ftitle">${esc(f.title)}</div>
+      </article>`).join('')
+    : `<p class="muted">немає свіжих findings</p>`;
+
+  const freshHtml = fresh.length
+    ? fresh.slice(0, 8).map(s => `<li><b>${esc(s.symbol)}</b> · ${esc(s.entity)} · ${esc(s.age_h)}h</li>`).join('')
+    : `<li class="muted">—</li>`;
+
+  const watchRows = watched.slice(0, 12).map(w => {
+    const st = Number(w.stable_streak || 0);
+    const sil = Number(w.silence_streak || 0);
+    const badge = sil ? `тиша×${sil}` : (st ? `stable×${st}` : 'live');
+    return `<tr>
+      <td><code>${esc(w.short)}</code></td>
+      <td>${esc(w.kind)}</td>
+      <td class="num">${esc(w.metric)}</td>
+      <td>${esc(badge)}</td>
+      <td class="num">${esc(w.score)}</td>
+    </tr>`;
+  }).join('') || `<tr><td colspan="5" class="muted">порожньо</td></tr>`;
+
+  const actionRows = actions.slice(0, 30).map(a => `
+    <article class="evt">
+      <div class="evt-top"><span class="tag">${esc(a.kind)} · ${esc(a.name)}</span><time>${esc(a.ts)}</time></div>
+      <div class="evt-detail">${esc(a.detail || '')}</div>
+      <code class="cmd">&gt;_ ${esc(a.name)}</code>
+    </article>`).join('') || `<p class="muted">ще немає дій</p>`;
+
+  const turnRows = turns.slice(0, 8).map(t => {
+    const targets = (t.targets || []).slice(0, 6).map(x => `<li>${esc(x)}</li>`).join('');
+    const regsT = (t.regularities || []).slice(0, 4).map(r => `<li>${esc(r.text || r)}</li>`).join('');
+    return `<article class="turn${t.noise ? ' noise' : ''}">
+      <div class="turn-h"><b>оберт ${esc(t.turn)}</b><time>${esc(t.ts)}</time></div>
+      <h3>${esc(t.title)}</h3>
+      <p>${esc(t.body)}</p>
+      ${targets ? `<ul class="tg">${targets}</ul>` : ''}
+      ${regsT ? `<ul class="rg">${regsT}</ul>` : ''}
+    </article>`;
+  }).join('') || `<p class="muted">історія порожня</p>`;
+
+  const wikiRows = wikiPages.map(p =>
+    `<li><span>${esc(p.id)}</span>${p.locked ? ' <i>locked</i>' : ''}${p.count != null ? ' · ' + p.count : ''}</li>`
+  ).join('');
+
+  document.getElementById('root').innerHTML = `
+  <div class="layout">
+    <main>
+      <div class="sec-h"><h2>Звʼязки з історії</h2><span class="live">● live api</span></div>
+      <div class="box"><h3>Цикли агента</h3><ul>${histHtml}</ul>
+        <p class="mini">status: ${esc((snap.health||{}).cycle_status)} · turn ${esc(turnN)} · interrupted ${esc((snap.health||{}).interrupted)}</p>
+      </div>
+      <div class="box"><h3>Profit (early до ATH)</h3><ul>${profitHtml}</ul></div>
+      <div class="box"><h3>Сімʼї (транзакції)</h3><ul>${famHtml}</ul></div>
+      <div class="box"><h3>Закономірності</h3><ul>${regHtml}</ul></div>
+      <div class="grid2">
+        <div class="box"><h3>Findings</h3>${findHtml}</div>
+        <div class="box"><h3>Свіжі сигнали ≤72г</h3><ul>${freshHtml}</ul></div>
+      </div>
+      <div class="sec-h"><h2>Стрічка дій</h2></div>
+      <p class="mini">інтел збирає → розвідка читає сімʼї (без expand) → вікі</p>
+      ${actionRows}
+    </main>
+    <aside>
+      <div class="stats">
+        <div class="stat"><b>${esc(turnN)}</b><span>оберт</span></div>
+        <div class="stat"><b>${esc(state.actions || 0)}</b><span>дій</span></div>
+        <div class="stat"><b>${esc(state.failures || 0)}</b><span>збоїв</span></div>
+      </div>
+      <div class="box"><h3>Історія обертів</h3>${turnRows}</div>
+      <div class="box"><h3>Watchbook</h3>
+        <table class="w"><thead><tr><th>id</th><th>kind</th><th>n</th><th>state</th><th>sc</th></tr></thead>
+        <tbody>${watchRows}</tbody></table>
+      </div>
+      <div class="box"><h3>Піднята рука</h3>
+        <div class="${hand ? 'hand open' : 'hand empty'}">${esc(hand || 'Відкритих питань немає')}</div>
+      </div>
+      <div class="box"><h3>Граф watch</h3>${graphSvg(watched, findings)}</div>
+      <div class="box"><h3>Вікі</h3><ul>${wikiRows}</ul></div>
+    </aside>
+  </div>`;
+
+  document.getElementById('foot-left').textContent =
+    `оберт ${turnN} · ${state.last_event || snap.ts || ''} · ${(state.last_title || '').slice(0, 90)}`;
+}
+
+async function refresh() {
+  try {
+    const r = await fetch('/api/rozvidka?ts=' + Date.now(), {cache: 'no-store'});
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    const snap = await r.json();
+    if (!snap.ok && snap.error) throw new Error(snap.error);
+    // loop running flag from status
+    try {
+      const st = await fetch('/api/status', {cache: 'no-store'}).then(x => x.json());
+      snap.loop_running = !!(st.rozvidka && st.rozvidka.running);
+    } catch (_) {}
+    render(snap);
+  } catch (e) {
+    document.getElementById('root').innerHTML =
+      `<div class="err">Не вдалося завантажити /api/rozvidka: ${esc(e.message || e)}<br/>
+       Перезапусти dashboard: <code>./scripts/stop_dashboard.sh && ./scripts/start_dashboard.sh</code></div>`;
+  }
+}
+
+async function runOnce(action, btn) {
+  btn.disabled = true;
+  const old = btn.textContent;
+  btn.textContent = '…';
+  try {
+    const j = await postAction(action);
+    if (!j.ok) alert(j.error || j.out || 'fail');
+    // wait briefly then refresh (job may be async)
+    await new Promise(r => setTimeout(r, action.includes('nolm') ? 900 : 2500));
+    await refresh();
+  } catch (e) {
+    alert(e);
+  } finally {
+    btn.disabled = false;
+    btn.textContent = old;
+  }
+}
+
+document.getElementById('btn-once').onclick = () => runOnce('rozvidka_once', document.getElementById('btn-once'));
+document.getElementById('btn-once-fast').onclick = () => runOnce('rozvidka_once_nolm', document.getElementById('btn-once-fast'));
+document.getElementById('btn-start').onclick = async () => {
+  const j = await postAction('start_rozvidka');
+  alert(j.out || JSON.stringify(j));
+  refresh();
+};
+document.getElementById('btn-stop').onclick = async () => {
+  const j = await postAction('stop_rozvidka');
+  alert(j.out || JSON.stringify(j));
+  refresh();
+};
+
+refresh();
+setInterval(refresh, 8000);
+</script>
+</body>
+</html>
+"""
+
+
+def write_ui(snapshot: dict[str, Any] | None = None, path: Path | None = None) -> str:
+    """Write the live shell. Snapshot arg kept for API compat (data comes from /api/rozvidka)."""
+    path = path or OUT_HTML
+    path.parent.mkdir(parents=True, exist_ok=True)
+    from agents.chrome import apply_to_html
+
+    path.write_text(apply_to_html(_HTML, "rozvidka"), encoding="utf-8")
+    alt = ROOT / "out" / "rozvidka.html"
+    if path.resolve() != alt.resolve():
+        alt.parent.mkdir(parents=True, exist_ok=True)
+        alt.write_text(apply_to_html(_HTML, "rozvidka"), encoding="utf-8")
+    return str(path)

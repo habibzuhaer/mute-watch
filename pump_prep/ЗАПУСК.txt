@@ -1,0 +1,57 @@
+================================================================================
+pump_prep — ЗАПУСК (prep + граф-сканер + звіти)
+================================================================================
+Модуль: pump_prep/   запуск з кореня MUTE (потрібен PYTHONPATH і .env)
+
+Що робить
+  • Live prep-монітор → Telegram (score ≥ SIGNAL_MIN_SCORE)
+  • Continuous scanner → граф токен↔MM/CEX/bridge, expand 1–2 hop
+  • HTML: Hub, Graph live, панель MUTE (EN|UK)
+
+Потрібно
+  ../.env → ETHERSCAN_API_KEY (+ Telegram для live prep)
+  ../addresses/pump_prep_watchlist.json
+  ../.venv
+
+--------------------------------------------------------------------------------
+LIVE PREP (Telegram)
+--------------------------------------------------------------------------------
+  cd ./MUTE
+  ./scripts/start_prep.sh
+  # PID: mute_prep.pid   лог: logs/mute_prep.out
+  # стоп: kill $(cat mute_prep.pid)
+
+--------------------------------------------------------------------------------
+CONTINUOUS SCANNER (граф)
+--------------------------------------------------------------------------------
+  ./scripts/start_scanner.sh
+  # PID: scanner.pid   стан: data/graph/   лог: logs/scanner.out
+  ./scripts/stop_scanner.sh
+
+  HTML оновлюється під час роботи:
+    pump_prep/out/graph_live.html
+    (також /reports/graph_live.html через панель)
+
+--------------------------------------------------------------------------------
+ОФЛАЙН / РАЗОВІ КОМАНДИ
+--------------------------------------------------------------------------------
+  cd ./MUTE
+  source .venv/bin/activate
+  export PYTHONPATH=.
+
+  python -m pump_prep panel              # → out/dashboard.html
+  python -m pump_prep hub                # → pump_prep/out/signals_hub.html
+  python -m pump_prep graph-html         # лише graph_live.html
+  python -m pump_prep rewrite-i18n       # перерахунок reasons EN/UK + HTML
+  python -m pump_prep backfill-signals
+  python -m pump_prep run --days 14      # разовий offline-скан seeds
+  python -m pump_prep deployers --limit 40 --max-age 365
+
+--------------------------------------------------------------------------------
+ПАНЕЛЬ
+--------------------------------------------------------------------------------
+  ./scripts/start_dashboard.sh
+  http://127.0.0.1:8765/
+  http://127.0.0.1:8765/launch.html
+  Reports: Hub · Graph · Deployer · Prep · MM
+================================================================================

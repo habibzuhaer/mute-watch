@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="refresh" content="0; url=dashboard.html"/>
+<title>MUTE → dashboard</title>
+<script>
+// Prefer live control panel when server is up
+fetch('http://127.0.0.1:8765/api/status',{cache:'no-store'})
+  .then(() => { location.href = 'http://127.0.0.1:8765/'; })
+  .catch(() => { location.href = 'dashboard.html'; });
+</script>
+</head>
+<body style="font-family:system-ui;background:#0c0e12;color:#9aa0a6;padding:24px">
+Переход на панель… <a href="dashboard.html" style="color:#7cb3ff">dashboard.html</a>
+· <a href="http://127.0.0.1:8765/" style="color:#7cb3ff">http://127.0.0.1:8765/</a>
+</body>
+</html>

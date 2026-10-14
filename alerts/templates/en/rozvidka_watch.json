@@ -1,0 +1,9 @@
+{
+  "id": "rozvidka_watch",
+  "title": "{emoji} ROZ · watch · {finding_type}",
+  "body_lines": [
+    "{title_line}",
+    "score {score}"
+  ],
+  "action_line": "<b>→ {action_label}:</b> {action_text}"
+}

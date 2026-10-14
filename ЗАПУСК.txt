@@ -1,0 +1,84 @@
+================================================================================
+MUTE — ЗАПУСК УСІХ ПРОЄКТІВ
+================================================================================
+Корінь: ./MUTE
+Панель:  http://127.0.0.1:8765/     (не file://)
+Мова UI: EN | UK  (кнопки в шапці, зберігається в браузері)
+
+Підпроєкти:
+  1) mute              — live-монітор DWF / seed → Telegram
+  2) pump_prep         — prep-монітор + граф-сканер + Hub / Graph
+  3) crypto_funds_tracker — таблиця DAT/mid-cap фондів (окремий звіт)
+
+Кожен підпроєкт також має свій ЗАПУСК.txt поруч.
+
+--------------------------------------------------------------------------------
+0. ОДИН РАЗ: ПІДГОТОВКА
+--------------------------------------------------------------------------------
+  cd ./MUTE
+  cp -n .env.example .env
+  # заповнити: TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID, ETHERSCAN_API_KEY
+  chmod +x START.sh scripts/*.sh
+  python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
+
+--------------------------------------------------------------------------------
+1. ШВИДКИЙ СТАРТ (основна система MUTE)
+--------------------------------------------------------------------------------
+  ./scripts/start_dashboard.sh   # панель + API :8765
+  ./scripts/start_prep.sh        # prep → Telegram
+  ./scripts/start_scanner.sh     # continuous graph scanner
+
+  # або з панелі:  http://127.0.0.1:8765/  → «Start system» / «Старт системи»
+  # або Launch:    http://127.0.0.1:8765/launch.html
+
+  Статус:  ./scripts/status.sh
+  Стоп:    ./scripts/stop_scanner.sh
+           ./scripts/stop_dashboard.sh
+           kill $(cat mute_prep.pid)   # prep
+           ./scripts/stop.sh           # лише DWF (mute.pid)
+           ./scripts/stop.sh --all     # DWF + prep + dashboard (див. скрипт)
+
+  Альтернатива «все зразу» (DWF + dashboard з START.sh):
+           ./START.sh
+
+--------------------------------------------------------------------------------
+2. mute — DWF live-монітор
+--------------------------------------------------------------------------------
+  Див. mute/ЗАПУСК.txt
+  ./scripts/start.sh               # → mute.pid, logs/mute.out
+  ADDRESSES_FILE=addresses/dwf_labs.json  ALERT_MODE=all
+
+--------------------------------------------------------------------------------
+3. pump_prep — prep + сканер + HTML
+--------------------------------------------------------------------------------
+  Див. pump_prep/ЗАПУСК.txt
+  ./scripts/start_prep.sh          # live prep → Telegram
+  ./scripts/start_scanner.sh       # continuous scanner
+  PYTHONPATH=. python -m pump_prep panel
+  PYTHONPATH=. python -m pump_prep hub
+  PYTHONPATH=. python -m pump_prep rewrite-i18n
+
+--------------------------------------------------------------------------------
+4. crypto_funds_tracker — окремий звіт
+--------------------------------------------------------------------------------
+  Див. crypto_funds_tracker/ЗАПУСК.txt
+  cd crypto_funds_tracker && .venv/bin/python main.py
+  → out/crypto_funds_report.html
+  (на панелі MUTE: Reports → MM / crypto_funds_report)
+
+--------------------------------------------------------------------------------
+ЛОГИ / PID
+--------------------------------------------------------------------------------
+  logs/dashboard.out   dashboard.pid
+  logs/mute_prep.out   mute_prep.pid
+  logs/scanner.out     scanner.pid
+  logs/mute.out        mute.pid          (DWF)
+  data/graph/          стан сканера (не губиться при рестарті)
+  data/prep/           стан prep-монітора
+
+--------------------------------------------------------------------------------
+ЯКЩО «НЕМАЄ ЗВ’ЯЗКУ» НА ПАНЕЛІ
+--------------------------------------------------------------------------------
+  ./scripts/start_dashboard.sh
+  відкрити саме http://127.0.0.1:8765/
+================================================================================

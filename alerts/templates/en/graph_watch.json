@@ -1,0 +1,9 @@
+{
+  "id": "graph_watch",
+  "title": "{emoji} GRAPH · WATCH · {symbol}",
+  "body_lines": [
+    "{signal_kind} · score {score}",
+    "{reasons_block}"
+  ],
+  "action_line": "<b>→ {action_label}:</b> {action_text}"
+}

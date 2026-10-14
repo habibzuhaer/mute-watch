@@ -1,0 +1,12 @@
+{
+  "id": "dwf_inbound",
+  "title": "<b>DWF IN</b> · {chain}",
+  "body_lines": [
+    "{wallet_label}",
+    "<code>{address_short}</code>",
+    "{kind}: <b>{amount_fmt} {symbol}</b>",
+    "від <code>{from_address_short}</code>",
+    "{explorer_link}"
+  ],
+  "action_line": "<b>→ {action_label}:</b> {action_text}"
+}

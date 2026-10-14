@@ -1,0 +1,236 @@
+{
+  "purpose": "early_pump_prep_watchlist",
+  "updated": "2026-07-29",
+  "method": [
+    "Seed known MM / wash-shop addresses",
+    "Alert on: new obscure ERC20 inbound to seed",
+    "Alert on: seed → CEX deposit of mid/micro-cap",
+    "Expand graph: first-degree counterparties that repeatedly send NEW tokens",
+    "Cluster: many fresh wallets funded from same parent trading same thin token"
+  ],
+  "notes": [
+    "Only publicly labeled / officially disclosed addresses.",
+    "Gotbit DOJ '36 wallets' not included without a public source — expand via 1-hop scan.",
+    "Wintermute entries are control group (legit MM), not wash-shop."
+  ],
+  "entities": {
+    "DWF Labs": [
+      {
+        "address": "0xF0984860f1F31a784c0FF0bb4d1322e377f97631",
+        "chain": "evm",
+        "role": "official secondary buy",
+        "signal": "INBOUND mid-cap tokens = accumulation / inventory",
+        "source": "official-disclosure-2025-05"
+      },
+      {
+        "address": "0xddAcAd3B1edee8E2F5b2e84f658202534fcb0374",
+        "chain": "evm",
+        "role": "labeled treasury/ops",
+        "signal": "token receives + CEX deposits",
+        "source": "arkham-etherscan-label"
+      },
+      {
+        "address": "0xD4B69e8D62C880E9DD55d419d5E07435C3538342",
+        "chain": "evm",
+        "role": "Etherscan nametag DWF",
+        "signal": "inventory / MM ops",
+        "source": "etherscan-nametag"
+      },
+      {
+        "address": "0x53c902a9ef069f3b85e5e71f918c4d582f3063fa",
+        "chain": "evm",
+        "role": "DWFLabs related label",
+        "signal": "cluster companion",
+        "source": "etherscan-label"
+      },
+      {
+        "address": "0x85336A844A7A7A1B2dB89eF0F8613b7Bf37FFE5B",
+        "chain": "evm",
+        "role": "Arkham cluster",
+        "signal": "counterparty flows",
+        "source": "arkham-activity"
+      },
+      {
+        "address": "0x159A8Bea4efe225d9C81f6Ce79a88856A1FBB047",
+        "chain": "evm",
+        "role": "Gnosis Safe linked",
+        "signal": "treasury moves",
+        "source": "arkham-activity"
+      },
+      {
+        "address": "0x24c460a3cB2332C2AFeCc45a8c0D71cF0a2B45A0",
+        "chain": "evm",
+        "role": "EOA linked",
+        "signal": "ops",
+        "source": "arkham-activity"
+      },
+      {
+        "address": "TR6s2mRQSV2voe5wT2HBGyeNYikDRjKsRb",
+        "chain": "tron",
+        "role": "official secondary",
+        "signal": "TRC20 inbound",
+        "source": "official-disclosure-2025-05"
+      },
+      {
+        "address": "HwDkuDCUipJHHKodBBCjffFvrjhmd4iVVh7fq25fShvt",
+        "chain": "solana",
+        "role": "official secondary",
+        "signal": "SPL inbound",
+        "source": "official-disclosure-2025-05"
+      }
+    ],
+    "Gotbit": [
+      {
+        "address": "0x6EeA4D3A006fCfCCAaDDF2E70eAe1d9A16b3b45d",
+        "chain": "evm",
+        "role": "gotbit-market.eth",
+        "signal": "wash bot cluster seed — expand counterparties",
+        "source": "ens-label"
+      },
+      {
+        "address": "0xF3b1C99Ff41836dbD20EAa1a5D502213A49EC997",
+        "chain": "evm",
+        "role": "gotbit related labeled",
+        "signal": "related label",
+        "source": "public-label"
+      }
+    ],
+    "Wintermute (compare / not wash-shop)": [
+      {
+        "address": "0xDBF03b407c01E7cD3cBea99509d93f8DDDC8C6FB",
+        "chain": "evm",
+        "role": "Wintermute Trading",
+        "signal": "legit MM — compare patterns",
+        "source": "etherscan-label"
+      },
+      {
+        "address": "0x00000000ae347930bd1E7B0F35588b92280f9e75",
+        "chain": "evm",
+        "role": "Wintermute related",
+        "signal": "verify on Etherscan before trusting",
+        "source": "public-label"
+      },
+      {
+        "address": "0xf30f9fdc0c4cfc85c1eac70d53a0d8b0b24917f0",
+        "chain": "evm",
+        "role": "Wintermute labeled",
+        "signal": "control cluster",
+        "source": "etherscan-label"
+      }
+    ]
+  },
+  "wallets": [
+    {
+      "address": "0xF0984860f1F31a784c0FF0bb4d1322e377f97631",
+      "family": "evm",
+      "label": "DWF Labs Official Secondary (EVM)",
+      "entity": "DWF Labs",
+      "source": "official-disclosure-2025-05",
+      "priority": 1
+    },
+    {
+      "address": "0xddAcAd3B1edee8E2F5b2e84f658202534fcb0374",
+      "family": "evm",
+      "label": "DWF Labs treasury/ops",
+      "entity": "DWF Labs",
+      "source": "arkham-etherscan-label",
+      "priority": 1
+    },
+    {
+      "address": "0xD4B69e8D62C880E9DD55d419d5E07435C3538342",
+      "family": "evm",
+      "label": "DWF Labs Etherscan nametag",
+      "entity": "DWF Labs",
+      "source": "etherscan-nametag",
+      "priority": 2
+    },
+    {
+      "address": "0x53c902a9ef069f3b85e5e71f918c4d582f3063fa",
+      "family": "evm",
+      "label": "DWFLabs related",
+      "entity": "DWF Labs",
+      "source": "etherscan-label",
+      "priority": 2
+    },
+    {
+      "address": "0x85336A844A7A7A1B2dB89eF0F8613b7Bf37FFE5B",
+      "family": "evm",
+      "label": "DWF Arkham cluster",
+      "entity": "DWF Labs",
+      "source": "arkham-activity",
+      "priority": 2
+    },
+    {
+      "address": "0x159A8Bea4efe225d9C81f6Ce79a88856A1FBB047",
+      "family": "evm",
+      "label": "DWF-linked Gnosis Safe",
+      "entity": "DWF Labs",
+      "source": "arkham-activity",
+      "priority": 2
+    },
+    {
+      "address": "0x24c460a3cB2332C2AFeCc45a8c0D71cF0a2B45A0",
+      "family": "evm",
+      "label": "DWF-linked EOA",
+      "entity": "DWF Labs",
+      "source": "arkham-activity",
+      "priority": 2
+    },
+    {
+      "address": "TR6s2mRQSV2voe5wT2HBGyeNYikDRjKsRb",
+      "family": "tron",
+      "label": "DWF Labs Official Secondary (TRON)",
+      "entity": "DWF Labs",
+      "source": "official-disclosure-2025-05",
+      "priority": 1
+    },
+    {
+      "address": "HwDkuDCUipJHHKodBBCjffFvrjhmd4iVVh7fq25fShvt",
+      "family": "solana",
+      "label": "DWF Labs Official Secondary (Solana)",
+      "entity": "DWF Labs",
+      "source": "official-disclosure-2025-05",
+      "priority": 1
+    },
+    {
+      "address": "0x6EeA4D3A006fCfCCAaDDF2E70eAe1d9A16b3b45d",
+      "family": "evm",
+      "label": "Gotbit gotbit-market.eth",
+      "entity": "Gotbit",
+      "source": "ens-label",
+      "priority": 1
+    },
+    {
+      "address": "0xF3b1C99Ff41836dbD20EAa1a5D502213A49EC997",
+      "family": "evm",
+      "label": "Gotbit related",
+      "entity": "Gotbit",
+      "source": "public-label",
+      "priority": 2
+    },
+    {
+      "address": "0xDBF03b407c01E7cD3cBea99509d93f8DDDC8C6FB",
+      "family": "evm",
+      "label": "Wintermute Trading (control)",
+      "entity": "Wintermute (compare / not wash-shop)",
+      "source": "etherscan-label",
+      "priority": 3
+    },
+    {
+      "address": "0x00000000ae347930bd1E7B0F35588b92280f9e75",
+      "family": "evm",
+      "label": "Wintermute related (control)",
+      "entity": "Wintermute (compare / not wash-shop)",
+      "source": "public-label",
+      "priority": 3
+    },
+    {
+      "address": "0xf30f9fdc0c4cfc85c1eac70d53a0d8b0b24917f0",
+      "family": "evm",
+      "label": "Wintermute labeled (control)",
+      "entity": "Wintermute (compare / not wash-shop)",
+      "source": "etherscan-label",
+      "priority": 3
+    }
+  ]
+}

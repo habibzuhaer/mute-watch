@@ -1,0 +1,45 @@
+{
+  "purpose": "extra_public_mm_fund_labels",
+  "updated": "2026-07-30",
+  "notes": [
+    "Curated public labels. Auto-discovered repeat deployers live in data/graph/discovered_labels.json."
+  ],
+  "wallets": [
+    {
+      "address": "0x1151314c646ce4e0efd76d1af4760ae66a9fe30f",
+      "family": "evm",
+      "label": "Bitfinex cold",
+      "entity": "Bitfinex",
+      "role": "cex",
+      "source": "etherscan-label",
+      "priority": 3
+    },
+    {
+      "address": "0xd24400ae8bfebb18ca49be86258a3c749cf46853",
+      "family": "evm",
+      "label": "Gemini",
+      "entity": "Gemini",
+      "role": "cex",
+      "source": "etherscan-label",
+      "priority": 3
+    },
+    {
+      "address": "0x6262998ced04146fa42253a5c0af90ba6b2c7c7c",
+      "family": "evm",
+      "label": "Crypto.com",
+      "entity": "Crypto.com",
+      "role": "cex",
+      "source": "etherscan-label",
+      "priority": 3
+    },
+    {
+      "address": "0x2faf487a4414fe77e2327f0bf4ae2a264a776ad2",
+      "family": "evm",
+      "label": "FTX (historical)",
+      "entity": "FTX",
+      "role": "cex_hist",
+      "source": "etherscan-label",
+      "priority": 4
+    }
+  ]
+}

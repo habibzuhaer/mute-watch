@@ -1,0 +1,2439 @@
+{
+  "generated_at": "2026-09-12T16:56:11.801132+00:00",
+  "cluster_count": 278,
+  "repeat_deployers": 7,
+  "pump_deployers": 256,
+  "promoted_labels": 19,
+  "clusters": [
+    {
+      "deployer": "0x61eac1f1c50c501af35a48d6ab7c42c24b399536",
+      "token_count": 38,
+      "pump_count": 7,
+      "match_flows": 0,
+      "symbols": [
+        "MUON",
+        "COINON",
+        "CVXON",
+        "GOOGLON",
+        "INTCON",
+        "AVGOON",
+        "TSMON",
+        "SHOPON",
+        "ASMLON",
+        "IBMON",
+        "AMDON",
+        "LLYON",
+        "HOODON",
+        "PLTRON",
+        "IEFAON",
+        "MRVLON",
+        "TLTON",
+        "MAON",
+        "QQQON",
+        "BABAON"
+      ],
+      "entities": [],
+      "best_ath_chg": -80.93287,
+      "score_hint": 100,
+      "tokens": [
+        {
+          "id": "micron-technology-ondo-tokenized-stock",
+          "symbol": "MUON",
+          "age_days": 330,
+          "ath": 1253.71,
+          "ath_date": "2026-06-25T13:36:10.000Z",
+          "ath_chg": -37.12365,
+          "had_pump": false,
+          "match_count": 0,
+          "status": "ok"
+        },
+        {
+          "id": "coinbase-ondo-tokenized-stock",
+          "symbol": "COINON",
+          "age_days": 292,
+          "ath": 400.82,
+          "ath_date": "2025-10-10T06:06:15.000Z",
+          "ath_chg": -58.98108,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        },
+        {
+          "id": "chevron-ondo-tokenized-stock",
+          "symbol": "CVXON",
+          "age_days": 225,
+          "ath": 221.58,
+          "ath_date": "2026-03-30T00:10:00.000Z",
+          "ath_chg": -11.68193,
+          "had_pump": false,
+          "match_count": 0,
+          "status": "ok"
+        },
+        {
+          "id": "alphabet-class-a-ondo-tokenized-stock",
+          "symbol": "GOOGLON",
+          "age_days": 330,
+          "ath": 407.56,
+          "ath_date": "2026-05-18T14:19:00.000Z",
+          "ath_chg": -17.99249,
+          "had_pump": false,
+          "match_count": 0,
+          "status": "ok"
+        },
+        {
+          "id": "intel-ondo-tokenized-stock",
+          "symbol": "INTCON",
+          "age_days": 329,
+          "ath": 275.94,
+          "ath_date": "2025-11-09T06:21:58.000Z",
+          "ath_chg": -69.95732,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        },
+        {
+          "id": "broadcom-ondo-tokenized-stock",
+          "symbol": "AVGOON",
+          "age_days": 120,
+          "ath": 506.32,
+          "ath_date": "2026-06-03T00:53:00.000Z",
+          "ath_chg": -25.37088,
+          "had_pump": false,
+          "match_count": 0,
+          "status": "ok"
+        },
+        {
+          "id": "taiwan-semiconductor-manufacturing-ondo-tokenized-stock",
+          "symbol": "TSMON",
+          "age_days": 330,
+          "ath": 479.61,
+          "ath_date": "2026-06-30T20:00:30.000Z",
+          "ath_chg": -19.1473,
+          "had_pump": false,
+          "match_count": 0,
+          "status": "ok"
+        },
+        {
+          "id": "shopify-ondo-tokenized-stock",
+          "symbol": "SHOPON",
+          "age_days": 273,
+          "ath": 182.01,
+          "ath_date": "2025-10-29T08:04:27.000Z",
+          "ath_chg": -28.70457,
+          "had_pump": false,
+          "match_count": 0,
+          "status": "ok"
+        },
+        {
+          "id": "asml-holding-nv-ondo-tokenized-stock",
+          "symbol": "ASMLON",
+          "age_days": 330,
+          "ath": 2156.07,
+          "ath_date": "2026-06-28T22:02:20.000Z",
+          "ath_chg": -27.81695,
+          "had_pump": false,
+          "match_count": 0,
+          "status": "ok"
+        },
+        {
+          "id": "ibm-ondo-tokenized-stock",
+          "symbol": "IBMON",
+          "age_days": 58,
+          "ath": 343.35,
+          "ath_date": "2026-06-01T11:34:30.000Z",
+          "ath_chg": -32.61349,
+          "had_pump": false,
+          "match_count": 0,
+          "status": "ok"
+        },
+        {
+          "id": "amd-ondo-tokenized-stock",
+          "symbol": "AMDON",
+          "age_days": 324,
+          "ath": 583.51,
+          "ath_date": "2026-06-30T19:23:10.000Z",
+          "ath_chg": -25.53729,
+          "had_pump": false,
+          "match_count": 0,
+          "status": "ok"
+        },
+        {
+          "id": "eli-lilly-ondo-tokenized-stock",
+          "symbol": "LLYON",
+          "age_days": 307,
+          "ath": 1268.11,
+          "ath_date": "2026-06-29T00:40:40.000Z",
+          "ath_chg": -3.70951,
+          "had_pump": false,
+          "match_count": 0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0x5f7a4c11bde4f218f0025ef444c369d838ffa2ad",
+      "token_count": 14,
+      "pump_count": 7,
+      "match_flows": 0,
+      "symbols": [
+        "SPCXX",
+        "TSLAX",
+        "NVDAX",
+        "GOOGLX",
+        "CRCLX",
+        "AMZNX",
+        "AAPLX",
+        "COINX",
+        "MCDX",
+        "QQQX",
+        "METAX",
+        "HOODX",
+        "SPYX",
+        "MSTRX"
+      ],
+      "entities": [],
+      "best_ath_chg": -83.07619,
+      "score_hint": 100,
+      "tokens": [
+        {
+          "id": "spacex-xstocks",
+          "symbol": "SPCXX",
+          "age_days": 43,
+          "ath": 225.31,
+          "ath_date": "2026-06-16T01:00:00.000Z",
+          "ath_chg": -49.6606,
+          "had_pump": false,
+          "match_count": 0,
+          "status": "ok"
+        },
+        {
+          "id": "tesla-xstock",
+          "symbol": "TSLAX",
+          "age_days": 387,
+          "ath": 496.55,
+          "ath_date": "2025-12-22T06:58:38.000Z",
+          "ath_chg": -38.57654,
+          "had_pump": false,
+          "match_count": 0,
+          "status": "ok"
+        },
+        {
+          "id": "nvidia-xstock",
+          "symbol": "NVDAX",
+          "age_days": 393,
+          "ath": 240.34,
+          "ath_date": "2026-05-15T00:07:00.000Z",
+          "ath_chg": -20.08824,
+          "had_pump": false,
+          "match_count": 0,
+          "status": "ok"
+        },
+        {
+          "id": "alphabet-xstock",
+          "symbol": "GOOGLX",
+          "age_days": 392,
+          "ath": 408.3,
+          "ath_date": "2026-05-18T14:26:00.000Z",
+          "ath_chg": -18.22572,
+          "had_pump": false,
+          "match_count": 0,
+          "status": "ok"
+        },
+        {
+          "id": "circle-xstock",
+          "symbol": "CRCLX",
+          "age_days": 392,
+          "ath": 257.13,
+          "ath_date": "2025-07-18T06:16:12.000Z",
+          "ath_chg": -75.52058,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        },
+        {
+          "id": "amazon-xstock",
+          "symbol": "AMZNX",
+          "age_days": 389,
+          "ath": 1080.7,
+          "ath_date": "2025-07-05T00:30:19.000Z",
+          "ath_chg": -78.90413,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        },
+        {
+          "id": "apple-xstock",
+          "symbol": "AAPLX",
+          "age_days": 393,
+          "ath": 345.13,
+          "ath_date": "2026-07-29T04:27:00.000Z",
+          "ath_chg": -0.81576,
+          "had_pump": false,
+          "match_count": 0,
+          "status": "ok"
+        },
+        {
+          "id": "coinbase-xstock",
+          "symbol": "COINX",
+          "age_days": 376,
+          "ath": 444.29,
+          "ath_date": "2025-07-18T06:16:47.000Z",
+          "ath_chg": -62.60195,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        },
+        {
+          "id": "mcdonald-s-xstock",
+          "symbol": "MCDX",
+          "age_days": 385,
+          "ath": 370.05,
+          "ath_date": "2026-03-02T06:40:32.000Z",
+          "ath_chg": -25.40176,
+          "had_pump": false,
+          "match_count": 0,
+          "status": "ok"
+        },
+        {
+          "id": "nasdaq-xstock",
+          "symbol": "QQQX",
+          "age_days": 392,
+          "ath": 2014.76,
+          "ath_date": "2025-07-05T18:59:42.000Z",
+          "ath_chg": -66.7477,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        },
+        {
+          "id": "meta-xstock",
+          "symbol": "METAX",
+          "age_days": 391,
+          "ath": 1359.31,
+          "ath_date": "2025-07-03T02:50:58.000Z",
+          "ath_chg": -56.57053,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        },
+        {
+          "id": "robinhood-xstock",
+          "symbol": "HOODX",
+          "age_days": 392,
+          "ath": 533.13,
+          "ath_date": "2025-07-03T03:10:47.000Z",
+          "ath_chg": -83.07619,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0xb80ded4a2282d571def1c4b4c2bd5e2482a7d971",
+      "token_count": 7,
+      "pump_count": 1,
+      "match_flows": 0,
+      "symbols": [
+        "VRTON",
+        "GLDON",
+        "IRENON",
+        "TQQQON",
+        "USOON",
+        "SGOVON",
+        "CEGON"
+      ],
+      "entities": [],
+      "best_ath_chg": -56.73613,
+      "score_hint": 100,
+      "tokens": [
+        {
+          "id": "vertiv-ondo-tokenized",
+          "symbol": "VRTON",
+          "age_days": 63,
+          "ath": 378.76,
+          "ath_date": "2026-05-14T18:52:00.000Z",
+          "ath_chg": -37.82547,
+          "had_pump": false,
+          "match_count": 0,
+          "status": "ok"
+        },
+        {
+          "id": "spdr-gold-shares-ondo-tokenized",
+          "symbol": "GLDON",
+          "age_days": 181,
+          "ath": 512.56,
+          "ath_date": "2026-01-28T22:28:12.000Z",
+          "ath_chg": -28.60174,
+          "had_pump": false,
+          "match_count": 0,
+          "status": "ok"
+        },
+        {
+          "id": "iren-ondo-tokenized-stock",
+          "symbol": "IRENON",
+          "age_days": 173,
+          "ath": 72.09,
+          "ath_date": "2026-06-03T11:24:00.000Z",
+          "ath_chg": -56.73613,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        },
+        {
+          "id": "proshares-ultrapro-qqq-ondo-tokenized",
+          "symbol": "TQQQON",
+          "age_days": 63,
+          "ath": 88.97,
+          "ath_date": "2026-05-31T00:09:00.000Z",
+          "ath_chg": -33.15767,
+          "had_pump": false,
+          "match_count": 0,
+          "status": "ok"
+        },
+        {
+          "id": "united-states-oil-fund-ondo-tokenized",
+          "symbol": "USOON",
+          "age_days": 202,
+          "ath": 156.46,
+          "ath_date": "2026-04-30T06:26:00.000Z",
+          "ath_chg": -16.83477,
+          "had_pump": false,
+          "match_count": 0,
+          "status": "ok"
+        },
+        {
+          "id": "ishares-0-3-month-treasury-bond-etf-ondo-tokenized-etf",
+          "symbol": "SGOVON",
+          "age_days": 95,
+          "ath": 104.36,
+          "ath_date": "2026-04-25T03:13:00.000Z",
+          "ath_chg": -3.1014,
+          "had_pump": false,
+          "match_count": 0,
+          "status": "ok"
+        },
+        {
+          "id": "constellation-energy-ondo-tokenized-stock",
+          "symbol": "CEGON",
+          "age_days": 194,
+          "ath": 350.3,
+          "ath_date": "2026-01-16T00:44:09.000Z",
+          "ath_chg": -25.655,
+          "had_pump": false,
+          "match_count": 0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0x8ddda3d1b193862cc6345d7c91c507ce2de86de2",
+      "token_count": 4,
+      "pump_count": 3,
+      "match_flows": 0,
+      "symbols": [
+        "SNDKON",
+        "NBISON",
+        "COHRON",
+        "CRWVON"
+      ],
+      "entities": [],
+      "best_ath_chg": -57.43951,
+      "score_hint": 100,
+      "tokens": [
+        {
+          "id": "sandisk-ondo-tokenized",
+          "symbol": "SNDKON",
+          "age_days": 120,
+          "ath": 2370.84,
+          "ath_date": "2026-06-25T20:07:20.000Z",
+          "ath_chg": -57.43951,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        },
+        {
+          "id": "nebius-group-ondo-tokenized",
+          "symbol": "NBISON",
+          "age_days": 120,
+          "ath": 298.53,
+          "ath_date": "2026-06-18T13:29:50.000Z",
+          "ath_chg": -48.76034,
+          "had_pump": false,
+          "match_count": 0,
+          "status": "ok"
+        },
+        {
+          "id": "coherent-ondo-tokenized",
+          "symbol": "COHRON",
+          "age_days": 120,
+          "ath": 462.67,
+          "ath_date": "2026-06-03T03:07:30.000Z",
+          "ath_chg": -50.30637,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        },
+        {
+          "id": "coreweave-ondo-tokenized",
+          "symbol": "CRWVON",
+          "age_days": 83,
+          "ath": 138.08,
+          "ath_date": "2026-05-06T20:07:00.000Z",
+          "ath_chg": -53.80236,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0x225124dbcfbd9fc3092fbe8839f89e22198bc71c",
+      "token_count": 2,
+      "pump_count": 2,
+      "match_flows": 0,
+      "symbols": [
+        "BIGTIME",
+        "OL"
+      ],
+      "entities": [],
+      "best_ath_chg": -99.41083,
+      "score_hint": 90,
+      "tokens": [
+        {
+          "id": "big-time",
+          "symbol": "BIGTIME",
+          "age_days": 1022,
+          "ath": 0.977359,
+          "ath_date": "2023-12-05T09:15:11.000Z",
+          "ath_chg": -99.41083,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        },
+        {
+          "id": "open-loot",
+          "symbol": "OL",
+          "age_days": 507,
+          "ath": 0.683764,
+          "ath_date": "2024-12-05T13:31:54.000Z",
+          "ath_chg": -99.16632,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0x16ace0cc69fc841e2707913ec2607c8d65126664",
+      "token_count": 2,
+      "pump_count": 2,
+      "match_flows": 0,
+      "symbols": [
+        "SPCXON",
+        "DRAMON"
+      ],
+      "entities": [],
+      "best_ath_chg": -52.96276,
+      "score_hint": 90,
+      "tokens": [
+        {
+          "id": "spacex-ondo-tokenized-stock",
+          "symbol": "SPCXON",
+          "age_days": 21,
+          "ath": 239.65,
+          "ath_date": "2026-06-13T09:04:30.000Z",
+          "ath_chg": -52.96276,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        },
+        {
+          "id": "roundhill-memory-etf-ondo-tokenized",
+          "symbol": "DRAMON",
+          "age_days": 24,
+          "ath": 97.93,
+          "ath_date": "2026-07-05T12:19:30.000Z",
+          "ath_chg": -52.86213,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0x98d586664fe72119e870b6071f396f03955166c0",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 6,
+      "symbols": [
+        "BOBA"
+      ],
+      "entities": [],
+      "best_ath_chg": -99.76325,
+      "score_hint": 75,
+      "tokens": [
+        {
+          "id": "boba-network",
+          "symbol": "BOBA",
+          "age_days": 1707,
+          "ath": 7.93,
+          "ath_date": "2021-11-25T12:48:25.000Z",
+          "ath_chg": -99.76325,
+          "had_pump": true,
+          "match_count": 6,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0xd0a16a95669b14161b09daffa20b24575b77b731",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 6,
+      "symbols": [
+        "SD"
+      ],
+      "entities": [],
+      "best_ath_chg": -99.63464,
+      "score_hint": 75,
+      "tokens": [
+        {
+          "id": "stader",
+          "symbol": "SD",
+          "age_days": 1377,
+          "ath": 30.17,
+          "ath_date": "2022-03-15T06:33:38.000Z",
+          "ath_chg": -99.63464,
+          "had_pump": true,
+          "match_count": 6,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0x4a15f6bdefbe6320809fe0d3f087e233e24da2d7",
+      "token_count": 3,
+      "pump_count": 0,
+      "match_flows": 0,
+      "symbols": [
+        "COSTON",
+        "TSLAON",
+        "NFLXON"
+      ],
+      "entities": [],
+      "best_ath_chg": -43.07889,
+      "score_hint": 60,
+      "tokens": [
+        {
+          "id": "costco-ondo-tokenized-stock",
+          "symbol": "COSTON",
+          "age_days": 225,
+          "ath": 1131.81,
+          "ath_date": "2026-07-05T14:56:00.000Z",
+          "ath_chg": -13.32711,
+          "had_pump": false,
+          "match_count": 0,
+          "status": "ok"
+        },
+        {
+          "id": "tesla-ondo-tokenized-stock",
+          "symbol": "TSLAON",
+          "age_days": 219,
+          "ath": 497.31,
+          "ath_date": "2025-12-22T06:50:58.000Z",
+          "ath_chg": -38.71674,
+          "had_pump": false,
+          "match_count": 0,
+          "status": "ok"
+        },
+        {
+          "id": "netflix-ondo-tokenized-stock",
+          "symbol": "NFLXON",
+          "age_days": 323,
+          "ath": 1265.73,
+          "ath_date": "2025-09-09T12:01:16.000Z",
+          "ath_chg": -43.07889,
+          "had_pump": false,
+          "match_count": 0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0xbb1a65333ea8947b5e0b2a7e349412840571f333",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 3,
+      "symbols": [
+        "OXT"
+      ],
+      "entities": [],
+      "best_ath_chg": -98.71705,
+      "score_hint": 60,
+      "tokens": [
+        {
+          "id": "orchid-protocol",
+          "symbol": "OXT",
+          "age_days": 2072,
+          "ath": 1.026,
+          "ath_date": "2021-04-05T04:20:25.000Z",
+          "ath_chg": -98.71705,
+          "had_pump": true,
+          "match_count": 3,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0x8ebe64e65d1b83c22b3c9c3ff5e16e6986c87c87",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 3,
+      "symbols": [
+        "AMP"
+      ],
+      "entities": [],
+      "best_ath_chg": -99.66334,
+      "score_hint": 60,
+      "tokens": [
+        {
+          "id": "amp-token",
+          "symbol": "AMP",
+          "age_days": 3890,
+          "ath": 0.120813,
+          "ath_date": "2021-06-16T08:03:41.000Z",
+          "ath_chg": -99.66334,
+          "had_pump": true,
+          "match_count": 3,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0x0ab8fd29aad54e70c38e9ed916e8bc2815671f87",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 3,
+      "symbols": [
+        "KYO"
+      ],
+      "entities": [],
+      "best_ath_chg": -92.54945,
+      "score_hint": 60,
+      "tokens": [
+        {
+          "id": "kyo",
+          "symbol": "KYO",
+          "age_days": 231,
+          "ath": 0.207212,
+          "ath_date": "2025-12-10T11:44:34.000Z",
+          "ath_chg": -92.54945,
+          "had_pump": true,
+          "match_count": 3,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0xaa9186b9953ba0153f276bf87381f2f6ca0423f4",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 2,
+      "symbols": [
+        "ELON"
+      ],
+      "entities": [],
+      "best_ath_chg": -98.85598,
+      "score_hint": 55,
+      "tokens": [
+        {
+          "id": "dogelon-mars",
+          "symbol": "ELON",
+          "age_days": 1826,
+          "ath": 2.59e-06,
+          "ath_date": "2021-10-30T12:39:32.000Z",
+          "ath_chg": -98.85598,
+          "had_pump": true,
+          "match_count": 2,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0xf4e55757cae99b8be73f345b7353c34f2c5dc161",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 2,
+      "symbols": [
+        "WMTX"
+      ],
+      "entities": [],
+      "best_ath_chg": -97.64642,
+      "score_hint": 55,
+      "tokens": [
+        {
+          "id": "world-mobile-token",
+          "symbol": "WMTX",
+          "age_days": 1552,
+          "ath": 0.979732,
+          "ath_date": "2022-02-16T23:00:01.000Z",
+          "ath_chg": -97.64642,
+          "had_pump": true,
+          "match_count": 2,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0x2ec1c79e71594373123d7b86d5847eef1ce0a475",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 1,
+      "symbols": [
+        "BLUR"
+      ],
+      "entities": [],
+      "best_ath_chg": -99.72299,
+      "score_hint": 50,
+      "tokens": [
+        {
+          "id": "blur",
+          "symbol": "BLUR",
+          "age_days": 1260,
+          "ath": 5.02,
+          "ath_date": "2023-02-14T09:33:55.000Z",
+          "ath_chg": -99.72299,
+          "had_pump": true,
+          "match_count": 1,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0xb9c691912f2d76d21666b62eec4c8cc823622894",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 1,
+      "symbols": [
+        "PUNDIX"
+      ],
+      "entities": [],
+      "best_ath_chg": -99.24777,
+      "score_hint": 50,
+      "tokens": [
+        {
+          "id": "pundi-x-2",
+          "symbol": "PUNDIX",
+          "age_days": 1947,
+          "ath": 10.07,
+          "ath_date": "2021-03-30T22:39:32.000Z",
+          "ath_chg": -99.24777,
+          "had_pump": true,
+          "match_count": 1,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0xcafeacdadd29f55ce935492e20f1f982df3fb51d",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 1,
+      "symbols": [
+        "YGG"
+      ],
+      "entities": [],
+      "best_ath_chg": -99.84614,
+      "score_hint": 50,
+      "tokens": [
+        {
+          "id": "yield-guild-games",
+          "symbol": "YGG",
+          "age_days": 1798,
+          "ath": 11.17,
+          "ath_date": "2021-11-20T08:49:03.000Z",
+          "ath_chg": -99.84614,
+          "had_pump": true,
+          "match_count": 1,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0xe6a6831b2322837c0a268c35714d160d0238232a",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 1,
+      "symbols": [
+        "LMWR"
+      ],
+      "entities": [],
+      "best_ath_chg": -99.2115,
+      "score_hint": 50,
+      "tokens": [
+        {
+          "id": "limewire-token",
+          "symbol": "LMWR",
+          "age_days": 998,
+          "ath": 1.79,
+          "ath_date": "2024-04-03T00:41:12.000Z",
+          "ath_chg": -99.2115,
+          "had_pump": true,
+          "match_count": 1,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0x22bf72fae47b907352afe89a05a1fd704c27c2be",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 1,
+      "symbols": [
+        "IOTX"
+      ],
+      "entities": [],
+      "best_ath_chg": -99.17285,
+      "score_hint": 50,
+      "tokens": [
+        {
+          "id": "iotex",
+          "symbol": "IOTX",
+          "age_days": 2987,
+          "ath": 0.255593,
+          "ath_date": "2021-11-13T08:54:18.000Z",
+          "ath_chg": -99.17285,
+          "had_pump": true,
+          "match_count": 1,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0xe0e42c70880d57230fb843db5eba6800533e91ae",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 0,
+      "symbols": [
+        "COTI"
+      ],
+      "entities": [],
+      "best_ath_chg": -97.66385,
+      "score_hint": 45,
+      "tokens": [
+        {
+          "id": "coti",
+          "symbol": "COTI",
+          "age_days": 2611,
+          "ath": 0.668634,
+          "ath_date": "2021-09-29T03:39:21.000Z",
+          "ath_chg": -97.66385,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0xe29548d356f6a9a5dad9ea6eccece1678c3044f2",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 0,
+      "symbols": [
+        "VANA"
+      ],
+      "entities": [],
+      "best_ath_chg": -96.87029,
+      "score_hint": 45,
+      "tokens": [
+        {
+          "id": "vana",
+          "symbol": "VANA",
+          "age_days": 568,
+          "ath": 35.23,
+          "ath_date": "2024-12-16T16:40:30.000Z",
+          "ath_chg": -96.87029,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0xee009faf00cf54c1b4387829af7a8dc5f0c8c8c5",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 0,
+      "symbols": [
+        "EUL"
+      ],
+      "entities": [],
+      "best_ath_chg": -89.52962,
+      "score_hint": 45,
+      "tokens": [
+        {
+          "id": "euler",
+          "symbol": "EUL",
+          "age_days": 1492,
+          "ath": 15.81,
+          "ath_date": "2025-07-10T21:56:24.000Z",
+          "ath_chg": -89.52962,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0x8266fe21e764b4adb510dab9bd42ee4daf43e827",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 0,
+      "symbols": [
+        "LA"
+      ],
+      "entities": [],
+      "best_ath_chg": -96.87015,
+      "score_hint": 45,
+      "tokens": [
+        {
+          "id": "lagrange",
+          "symbol": "LA",
+          "age_days": 420,
+          "ath": 1.72,
+          "ath_date": "2025-06-05T17:35:01.000Z",
+          "ath_chg": -96.87015,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0xce0fdee4f558b446a05b0fe193e2b7cf386cc78a",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 0,
+      "symbols": [
+        "0G"
+      ],
+      "entities": [],
+      "best_ath_chg": -97.90155,
+      "score_hint": 45,
+      "tokens": [
+        {
+          "id": "zero-gravity",
+          "symbol": "0G",
+          "age_days": 309,
+          "ath": 7.05,
+          "ath_date": "2025-09-22T18:51:08.000Z",
+          "ath_chg": -97.90155,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0x11f23d31e4d5a823ef8e9c07c35b3dc4b86d0658",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 0,
+      "symbols": [
+        "OPEN"
+      ],
+      "entities": [],
+      "best_ath_chg": -90.06753,
+      "score_hint": 45,
+      "tokens": [
+        {
+          "id": "openledger-2",
+          "symbol": "OPEN",
+          "age_days": 324,
+          "ath": 1.82,
+          "ath_date": "2025-09-08T11:47:44.000Z",
+          "ath_chg": -90.06753,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0x6caf72f26231b7c240794184723b4a199fab21a9",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 0,
+      "symbols": [
+        "VANRY"
+      ],
+      "entities": [],
+      "best_ath_chg": -98.86198,
+      "score_hint": 45,
+      "tokens": [
+        {
+          "id": "vanar-chain",
+          "symbol": "VANRY",
+          "age_days": 1443,
+          "ath": 0.372326,
+          "ath_date": "2024-03-13T05:00:51.000Z",
+          "ath_chg": -98.86198,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0x4905147341fb390f0a3f4f01178a040bc27d8a04",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 0,
+      "symbols": [
+        "ESP"
+      ],
+      "entities": [],
+      "best_ath_chg": -71.51951,
+      "score_hint": 45,
+      "tokens": [
+        {
+          "id": "espresso",
+          "symbol": "ESP",
+          "age_days": 167,
+          "ath": 0.217368,
+          "ath_date": "2026-02-24T00:10:22.000Z",
+          "ath_chg": -71.51951,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0x826e0bb2276271efdf2a500597f37b94f6c153ba",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 0,
+      "symbols": [
+        "ENSO"
+      ],
+      "entities": [],
+      "best_ath_chg": -81.31248,
+      "score_hint": 45,
+      "tokens": [
+        {
+          "id": "enso",
+          "symbol": "ENSO",
+          "age_days": 288,
+          "ath": 4.63,
+          "ath_date": "2025-10-14T00:50:28.000Z",
+          "ath_chg": -81.31248,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0x1d7c6783328c145393e84fb47a7f7c548f5ee28d",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 0,
+      "symbols": [
+        "STG"
+      ],
+      "entities": [],
+      "best_ath_chg": -97.13821,
+      "score_hint": 45,
+      "tokens": [
+        {
+          "id": "stargate-finance",
+          "symbol": "STG",
+          "age_days": 1595,
+          "ath": 4.14,
+          "ath_date": "2022-04-01T16:00:00.000Z",
+          "ath_chg": -97.13821,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0xc64421050b3f9b17fd58cc86a2c02a06164a15f6",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 0,
+      "symbols": [
+        "TLM"
+      ],
+      "entities": [],
+      "best_ath_chg": -99.78255,
+      "score_hint": 45,
+      "tokens": [
+        {
+          "id": "alien-worlds",
+          "symbol": "TLM",
+          "age_days": 1798,
+          "ath": 0.739714,
+          "ath_date": "2021-05-02T16:00:00.000Z",
+          "ath_chg": -99.78255,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0xa6df9724f891a0838ca6eab95a9a2da6c0179ef1",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 0,
+      "symbols": [
+        "IRYS"
+      ],
+      "entities": [],
+      "best_ath_chg": -82.11504,
+      "score_hint": 45,
+      "tokens": [
+        {
+          "id": "irys",
+          "symbol": "IRYS",
+          "age_days": 246,
+          "ath": 0.086008,
+          "ath_date": "2026-05-15T11:55:00.000Z",
+          "ath_chg": -82.11504,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0xdd56afff9a62caa2a9f0ebfdf56def53112b3186",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 0,
+      "symbols": [
+        "BLEND"
+      ],
+      "entities": [],
+      "best_ath_chg": -72.53812,
+      "score_hint": 45,
+      "tokens": [
+        {
+          "id": "fluent-network",
+          "symbol": "BLEND",
+          "age_days": 91,
+          "ath": 0.251926,
+          "ath_date": "2026-04-29T04:39:00.000Z",
+          "ath_chg": -72.53812,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0x0536a28b56bb590560703b5c945356fc8fdfc932",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 0,
+      "symbols": [
+        "BIO"
+      ],
+      "entities": [],
+      "best_ath_chg": -97.45806,
+      "score_hint": 45,
+      "tokens": [
+        {
+          "id": "bio-protocol",
+          "symbol": "BIO",
+          "age_days": 572,
+          "ath": 0.888995,
+          "ath_date": "2025-01-03T05:16:10.000Z",
+          "ath_chg": -97.45806,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0x712e850fccc7c5a2cade415d7db1e31624d13818",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 0,
+      "symbols": [
+        "AGLD"
+      ],
+      "entities": [],
+      "best_ath_chg": -98.01972,
+      "score_hint": 45,
+      "tokens": [
+        {
+          "id": "adventure-gold",
+          "symbol": "AGLD",
+          "age_days": 1790,
+          "ath": 7.7,
+          "ath_date": "2021-09-03T03:41:40.000Z",
+          "ath_chg": -98.01972,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0x0af91fa049a7e1894f480bfe5bba20142c6c29a9",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 0,
+      "symbols": [
+        "SYN"
+      ],
+      "entities": [],
+      "best_ath_chg": -97.37971,
+      "score_hint": 45,
+      "tokens": [
+        {
+          "id": "synapse-2",
+          "symbol": "SYN",
+          "age_days": 1777,
+          "ath": 4.92,
+          "ath_date": "2021-10-23T16:24:41.000Z",
+          "ath_chg": -97.37971,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0x749a368846e988a00bd8aed649552376520fba91",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 0,
+      "symbols": [
+        "UPC"
+      ],
+      "entities": [],
+      "best_ath_chg": -96.34431,
+      "score_hint": 45,
+      "tokens": [
+        {
+          "id": "upcx",
+          "symbol": "UPC",
+          "age_days": 492,
+          "ath": 5.37,
+          "ath_date": "2025-03-24T07:07:26.000Z",
+          "ath_chg": -96.34431,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0xf1357d45671cb16de055752809c8d2e3ab4afe2e",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 0,
+      "symbols": [
+        "GWEI"
+      ],
+      "entities": [],
+      "best_ath_chg": -92.37828,
+      "score_hint": 45,
+      "tokens": [
+        {
+          "id": "ethgas-2",
+          "symbol": "GWEI",
+          "age_days": 181,
+          "ath": 0.246648,
+          "ath_date": "2026-06-29T13:15:30.000Z",
+          "ath_chg": -92.37828,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0x7b959eba672673a081d5edbfe6aceaa2ecd6fa78",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 0,
+      "symbols": [
+        "NIL"
+      ],
+      "entities": [],
+      "best_ath_chg": -96.21496,
+      "score_hint": 45,
+      "tokens": [
+        {
+          "id": "nillion",
+          "symbol": "NIL",
+          "age_days": 492,
+          "ath": 0.897077,
+          "ath_date": "2025-03-24T05:30:35.000Z",
+          "ath_chg": -96.21496,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0xe9985cc9ebabe343160969bcd1a1628ddb13c3ae",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 0,
+      "symbols": [
+        "PEOPLE"
+      ],
+      "entities": [],
+      "best_ath_chg": -96.54139,
+      "score_hint": 45,
+      "tokens": [
+        {
+          "id": "constitutiondao",
+          "symbol": "PEOPLE",
+          "age_days": 1713,
+          "ath": 0.185022,
+          "ath_date": "2021-12-22T21:59:19.000Z",
+          "ath_chg": -96.54139,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0x18473451b8f62c575717f7fcf05761ff01495cab",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 0,
+      "symbols": [
+        "EPIC"
+      ],
+      "entities": [],
+      "best_ath_chg": -77.18482,
+      "score_hint": 45,
+      "tokens": [
+        {
+          "id": "epic-chain",
+          "symbol": "EPIC",
+          "age_days": 478,
+          "ath": 3.2,
+          "ath_date": "2025-08-20T07:57:23.000Z",
+          "ath_chg": -77.18482,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0x5737bf56559dd32d8880cfa236fe613e2162e157",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 0,
+      "symbols": [
+        "DIA"
+      ],
+      "entities": [],
+      "best_ath_chg": -97.96431,
+      "score_hint": 45,
+      "tokens": [
+        {
+          "id": "dia-data",
+          "symbol": "DIA",
+          "age_days": 2135,
+          "ath": 5.73,
+          "ath_date": "2021-05-05T04:14:13.000Z",
+          "ath_chg": -97.96431,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0xc28ddc3f0d86caac8bbca5ec0ff0d394f12f10c3",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 0,
+      "symbols": [
+        "LINEA"
+      ],
+      "entities": [],
+      "best_ath_chg": -95.15004,
+      "score_hint": 45,
+      "tokens": [
+        {
+          "id": "linea",
+          "symbol": "LINEA",
+          "age_days": 322,
+          "ath": 0.04666898,
+          "ath_date": "2025-09-10T07:26:12.000Z",
+          "ath_chg": -95.15004,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0x00f6bf3c5033e944feddb3dc8ffb4d47af17ef0b",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 0,
+      "symbols": [
+        "STORJ"
+      ],
+      "entities": [],
+      "best_ath_chg": -98.68201,
+      "score_hint": 45,
+      "tokens": [
+        {
+          "id": "storj",
+          "symbol": "STORJ",
+          "age_days": 3314,
+          "ath": 3.81,
+          "ath_date": "2021-03-27T17:39:34.000Z",
+          "ath_chg": -98.68201,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0x146ee71e057e6b10efb93aedf631fde6cbaed5e2",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 0,
+      "symbols": [
+        "ANKR"
+      ],
+      "entities": [],
+      "best_ath_chg": -98.43996,
+      "score_hint": 45,
+      "tokens": [
+        {
+          "id": "ankr",
+          "symbol": "ANKR",
+          "age_days": 2701,
+          "ath": 0.213513,
+          "ath_date": "2021-04-16T11:44:04.000Z",
+          "ath_chg": -98.43996,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0x40d7eb23798a15b5dc2c0c6b1006f4e8bce8b8b4",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 0,
+      "symbols": [
+        "REZ"
+      ],
+      "entities": [],
+      "best_ath_chg": -99.11791,
+      "score_hint": 45,
+      "tokens": [
+        {
+          "id": "renzo",
+          "symbol": "REZ",
+          "age_days": 820,
+          "ath": 0.278213,
+          "ath_date": "2024-04-30T03:50:54.000Z",
+          "ath_chg": -99.11791,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0x433baf6c9dab45201d53fb99b88392c0bb20db3f",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 0,
+      "symbols": [
+        "C98"
+      ],
+      "entities": [],
+      "best_ath_chg": -99.82323,
+      "score_hint": 45,
+      "tokens": [
+        {
+          "id": "coin98",
+          "symbol": "C98",
+          "age_days": 1832,
+          "ath": 6.42,
+          "ath_date": "2021-08-25T04:26:13.000Z",
+          "ath_chg": -99.82323,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0x182ce2debeb6ba51fd98def02e5d755fa410a34e",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 0,
+      "symbols": [
+        "AVA"
+      ],
+      "entities": [],
+      "best_ath_chg": -97.65598,
+      "score_hint": 45,
+      "tokens": [
+        {
+          "id": "concierge-io",
+          "symbol": "AVA",
+          "age_days": 2984,
+          "ath": 6.45,
+          "ath_date": "2021-04-13T23:24:28.000Z",
+          "ath_chg": -97.65598,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0x20e12a9a5c738e265ec81d6f2a8e77785b6aa8b8",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 0,
+      "symbols": [
+        "MOG"
+      ],
+      "entities": [],
+      "best_ath_chg": -97.49698,
+      "score_hint": 45,
+      "tokens": [
+        {
+          "id": "mog-coin",
+          "symbol": "MOG",
+          "age_days": 1101,
+          "ath": 4.02e-06,
+          "ath_date": "2024-12-06T19:55:46.000Z",
+          "ath_chg": -97.49698,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0x17dbfa501f2f376d092fa69d3223a09bba4efdf7",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 0,
+      "symbols": [
+        "DODO"
+      ],
+      "entities": [],
+      "best_ath_chg": -99.77268,
+      "score_hint": 45,
+      "tokens": [
+        {
+          "id": "dodo",
+          "symbol": "DODO",
+          "age_days": 1904,
+          "ath": 8.38,
+          "ath_date": "2021-02-20T01:19:28.000Z",
+          "ath_chg": -99.77268,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0xa39e4d6bb25a8e55552d6d9ab1f5f8889dddc80d",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 0,
+      "symbols": [
+        "YB"
+      ],
+      "entities": [],
+      "best_ath_chg": -92.13735,
+      "score_hint": 45,
+      "tokens": [
+        {
+          "id": "yield-basis",
+          "symbol": "YB",
+          "age_days": 287,
+          "ath": 0.818511,
+          "ath_date": "2025-10-15T03:35:05.000Z",
+          "ath_chg": -92.13735,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0x548dac55f260aa4631f589cb2fe72b5e9e4c93dc",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 0,
+      "symbols": [
+        "SPK"
+      ],
+      "entities": [],
+      "best_ath_chg": -91.56681,
+      "score_hint": 45,
+      "tokens": [
+        {
+          "id": "spark-2",
+          "symbol": "SPK",
+          "age_days": 407,
+          "ath": 0.184472,
+          "ath_date": "2025-07-23T14:01:29.000Z",
+          "ath_chg": -91.56681,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0x123694886dbf5ac94dda07135349534536d14caf",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 0,
+      "symbols": [
+        "T"
+      ],
+      "entities": [],
+      "best_ath_chg": -98.49879,
+      "score_hint": 45,
+      "tokens": [
+        {
+          "id": "threshold-network-token",
+          "symbol": "T",
+          "age_days": 1647,
+          "ath": 0.226934,
+          "ath_date": "2022-03-02T00:36:02.000Z",
+          "ath_chg": -98.49879,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0x3eb69ef2dbedd5d58aa5e074131cd22d5e87ff53",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 0,
+      "symbols": [
+        "MOVE"
+      ],
+      "entities": [],
+      "best_ath_chg": -99.4538,
+      "score_hint": 45,
+      "tokens": [
+        {
+          "id": "movement",
+          "symbol": "MOVE",
+          "age_days": 595,
+          "ath": 1.45,
+          "ath_date": "2024-12-09T20:05:51.000Z",
+          "ath_chg": -99.4538,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0xa4d8554f7c4b680459e66d907bc017c9f728fd20",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 0,
+      "symbols": [
+        "TRB"
+      ],
+      "entities": [],
+      "best_ath_chg": -97.72104,
+      "score_hint": 45,
+      "tokens": [
+        {
+          "id": "tellor",
+          "symbol": "TRB",
+          "age_days": 2421,
+          "ath": 593.09,
+          "ath_date": "2023-12-31T14:15:07.000Z",
+          "ath_chg": -97.72104,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0x96e30e7f291ce02f2b653d3e8902992a2aa843b8",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 0,
+      "symbols": [
+        "PORTAL"
+      ],
+      "entities": [],
+      "best_ath_chg": -99.71085,
+      "score_hint": 45,
+      "tokens": [
+        {
+          "id": "portal-2",
+          "symbol": "PORTAL",
+          "age_days": 2750,
+          "ath": 3.36,
+          "ath_date": "2024-02-29T02:05:01.000Z",
+          "ath_chg": -99.71085,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0x42f9d42b0ad323be203a56618d5053329cb2fb95",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 0,
+      "symbols": [
+        "W"
+      ],
+      "entities": [],
+      "best_ath_chg": -99.49442,
+      "score_hint": 45,
+      "tokens": [
+        {
+          "id": "wormhole",
+          "symbol": "W",
+          "age_days": 847,
+          "ath": 1.66,
+          "ath_date": "2024-04-03T03:46:35.000Z",
+          "ath_chg": -99.49442,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0x2ce0f9e0a65aefae3b51d59916eacb1053907d23",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 0,
+      "symbols": [
+        "WCT"
+      ],
+      "entities": [],
+      "best_ath_chg": -97.34932,
+      "score_hint": 45,
+      "tokens": [
+        {
+          "id": "connect-token-wct",
+          "symbol": "WCT",
+          "age_days": 471,
+          "ath": 1.34,
+          "ath_date": "2025-05-30T23:55:32.000Z",
+          "ath_chg": -97.34932,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0x02af89632611707ece5c01a9ef77ec75ccab23fc",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 0,
+      "symbols": [
+        "REQ"
+      ],
+      "entities": [],
+      "best_ath_chg": -95.13499,
+      "score_hint": 45,
+      "tokens": [
+        {
+          "id": "request-network",
+          "symbol": "REQ",
+          "age_days": 3204,
+          "ath": 1.059,
+          "ath_date": "2018-01-05T16:00:00.000Z",
+          "ath_chg": -95.13499,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0xa99c602037f8e85a44bbe88f3c0ee3af60345b9b",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 0,
+      "symbols": [
+        "TOKEN"
+      ],
+      "entities": [],
+      "best_ath_chg": -99.22727,
+      "score_hint": 45,
+      "tokens": [
+        {
+          "id": "tokenfi",
+          "symbol": "TOKEN",
+          "age_days": 1006,
+          "ath": 0.243269,
+          "ath_date": "2024-03-26T05:01:11.000Z",
+          "ath_chg": -99.22727,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0x315e6e028060e9b870e10ec5cab711ae2d566795",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 0,
+      "symbols": [
+        "TURBO"
+      ],
+      "entities": [],
+      "best_ath_chg": -94.74851,
+      "score_hint": 45,
+      "tokens": [
+        {
+          "id": "turbo",
+          "symbol": "TURBO",
+          "age_days": 1183,
+          "ath": 0.01431669,
+          "ath_date": "2024-12-11T13:52:05.000Z",
+          "ath_chg": -94.74851,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0xe906b91103d216420f7ae13b29fde73ce9c206cd",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 0,
+      "symbols": [
+        "CYBER"
+      ],
+      "entities": [],
+      "best_ath_chg": -98.10653,
+      "score_hint": 45,
+      "tokens": [
+        {
+          "id": "cyberconnect",
+          "symbol": "CYBER",
+          "age_days": 1014,
+          "ath": 15.79,
+          "ath_date": "2023-09-01T14:25:07.000Z",
+          "ath_chg": -98.10653,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0x0f6fb700cba98e1244a50c075d94b3365536404c",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 0,
+      "symbols": [
+        "ERA"
+      ],
+      "entities": [],
+      "best_ath_chg": -96.28518,
+      "score_hint": 45,
+      "tokens": [
+        {
+          "id": "caldera",
+          "symbol": "ERA",
+          "age_days": 377,
+          "ath": 1.88,
+          "ath_date": "2025-07-17T12:36:33.000Z",
+          "ath_chg": -96.28518,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0xfbd265380d6ae76a43943efcbe1d78ffebe363cb",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 0,
+      "symbols": [
+        "UP"
+      ],
+      "entities": [],
+      "best_ath_chg": -78.29576,
+      "score_hint": 45,
+      "tokens": [
+        {
+          "id": "superform",
+          "symbol": "UP",
+          "age_days": 169,
+          "ath": 0.287717,
+          "ath_date": "2026-05-13T14:38:00.000Z",
+          "ath_chg": -78.29576,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0x24dd2870b2a1986f58b495848606ed93270ec6fb",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 0,
+      "symbols": [
+        "API3"
+      ],
+      "entities": [],
+      "best_ath_chg": -98.16943,
+      "score_hint": 45,
+      "tokens": [
+        {
+          "id": "api3",
+          "symbol": "API3",
+          "age_days": 1510,
+          "ath": 10.3,
+          "ath_date": "2021-04-06T22:54:35.000Z",
+          "ath_chg": -98.16943,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0x000001043b3b967d62657116fb4ff349cba08974",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 0,
+      "symbols": [
+        "TAIKO"
+      ],
+      "entities": [],
+      "best_ath_chg": -98.16611,
+      "score_hint": 45,
+      "tokens": [
+        {
+          "id": "taiko",
+          "symbol": "TAIKO",
+          "age_days": 782,
+          "ath": 3.8,
+          "ath_date": "2024-06-05T05:01:31.000Z",
+          "ath_chg": -98.16611,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0x1924b8561eef20e70ede628a296175d358be80e5",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 0,
+      "symbols": [
+        "BASED"
+      ],
+      "entities": [],
+      "best_ath_chg": -75.14628,
+      "score_hint": 45,
+      "tokens": [
+        {
+          "id": "based-one",
+          "symbol": "BASED",
+          "age_days": 121,
+          "ath": 0.321592,
+          "ath_date": "2026-04-16T16:27:00.000Z",
+          "ath_chg": -75.14628,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0xcf7ee26fc7cd74476a243c3dff60de4575e6ba49",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 0,
+      "symbols": [
+        "MEME"
+      ],
+      "entities": [],
+      "best_ath_chg": -99.1038,
+      "score_hint": 45,
+      "tokens": [
+        {
+          "id": "memecoin-2",
+          "symbol": "MEME",
+          "age_days": 999,
+          "ath": 0.056324,
+          "ath_date": "2024-03-04T09:30:21.000Z",
+          "ath_chg": -99.1038,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0xe2299f952d833afaecfd6995cc76f29aeb06c495",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 0,
+      "symbols": [
+        "ID"
+      ],
+      "entities": [],
+      "best_ath_chg": -98.51049,
+      "score_hint": 45,
+      "tokens": [
+        {
+          "id": "space-id",
+          "symbol": "ID",
+          "age_days": 1188,
+          "ath": 1.84,
+          "ath_date": "2024-03-17T02:31:23.000Z",
+          "ath_chg": -98.51049,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0x3b5593322b63e96457b1da2dea7f53d7100c6376",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 0,
+      "symbols": [
+        "MBG"
+      ],
+      "entities": [],
+      "best_ath_chg": -95.51056,
+      "score_hint": 45,
+      "tokens": [
+        {
+          "id": "mbg-by-multibank-group",
+          "symbol": "MBG",
+          "age_days": 370,
+          "ath": 2.56,
+          "ath_date": "2025-07-23T16:36:31.000Z",
+          "ath_chg": -95.51056,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0xf942dba4159cb61f8ad88ca4a83f5204e8f4a6bd",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 0,
+      "symbols": [
+        "SUSHI"
+      ],
+      "entities": [],
+      "best_ath_chg": -99.36059,
+      "score_hint": 45,
+      "tokens": [
+        {
+          "id": "sushi",
+          "symbol": "SUSHI",
+          "age_days": 2151,
+          "ath": 23.38,
+          "ath_date": "2021-03-13T15:44:36.000Z",
+          "ath_chg": -99.36059,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0xc355594b3a279152396a1fd6b4f387a2ab9d8c5e",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 0,
+      "symbols": [
+        "SAHARA"
+      ],
+      "entities": [],
+      "best_ath_chg": -95.25154,
+      "score_hint": 45,
+      "tokens": [
+        {
+          "id": "sahara-ai",
+          "symbol": "SAHARA",
+          "age_days": 398,
+          "ath": 0.160529,
+          "ath_date": "2025-07-23T19:05:40.000Z",
+          "ath_chg": -95.25154,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0x7d61a56899dd55e5d16c1bab38f46f42b4d33887",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 0,
+      "symbols": [
+        "ALICE"
+      ],
+      "entities": [],
+      "best_ath_chg": -99.72156,
+      "score_hint": 45,
+      "tokens": [
+        {
+          "id": "my-neighbor-alice",
+          "symbol": "ALICE",
+          "age_days": 1889,
+          "ath": 40.93,
+          "ath_date": "2021-03-15T00:54:21.000Z",
+          "ath_chg": -99.72156,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0x182085ce8b0faddc8503d9921df6af076281a6a9",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 0,
+      "symbols": [
+        "ZKP"
+      ],
+      "entities": [],
+      "best_ath_chg": -81.78054,
+      "score_hint": 45,
+      "tokens": [
+        {
+          "id": "zkpass",
+          "symbol": "ZKP",
+          "age_days": 222,
+          "ath": 0.23286,
+          "ath_date": "2025-12-19T03:10:29.000Z",
+          "ath_chg": -81.78054,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0xc6a34b2bf59baf984884a0cf4c84ed1541e710d7",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 0,
+      "symbols": [
+        "AUCTION"
+      ],
+      "entities": [],
+      "best_ath_chg": -95.903,
+      "score_hint": 45,
+      "tokens": [
+        {
+          "id": "auction",
+          "symbol": "AUCTION",
+          "age_days": 1371,
+          "ath": 70.44,
+          "ath_date": "2021-04-11T20:15:39.000Z",
+          "ath_chg": -95.903,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0xc76610b1bc9bcd150aaa43f7c9d87b5da8683e10",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 0,
+      "symbols": [
+        "BSB"
+      ],
+      "entities": [],
+      "best_ath_chg": -93.92389,
+      "score_hint": 45,
+      "tokens": [
+        {
+          "id": "block-street",
+          "symbol": "BSB",
+          "age_days": 147,
+          "ath": 1.99,
+          "ath_date": "2026-05-20T19:09:00.000Z",
+          "ath_chg": -93.92389,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0x2084d9f77828cde61b0f4e8b97576116cb9265be",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 0,
+      "symbols": [
+        "BILL"
+      ],
+      "entities": [],
+      "best_ath_chg": -90.14466,
+      "score_hint": 45,
+      "tokens": [
+        {
+          "id": "billions-network",
+          "symbol": "BILL",
+          "age_days": 86,
+          "ath": 0.233475,
+          "ath_date": "2026-05-15T08:41:00.000Z",
+          "ath_chg": -90.14466,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0xb7687a5a3e7b49522705833bf7d5baf18aabdd2d",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 0,
+      "symbols": [
+        "PHA"
+      ],
+      "entities": [],
+      "best_ath_chg": -98.54712,
+      "score_hint": 45,
+      "tokens": [
+        {
+          "id": "pha",
+          "symbol": "PHA",
+          "age_days": 1889,
+          "ath": 1.39,
+          "ath_date": "2021-05-14T20:20:32.000Z",
+          "ath_chg": -98.54712,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0x9f2667b9ec9a7d09a47d87156f032c6735a077ad",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 0,
+      "symbols": [
+        "TOWNS"
+      ],
+      "entities": [],
+      "best_ath_chg": -97.181,
+      "score_hint": 45,
+      "tokens": [
+        {
+          "id": "towns",
+          "symbol": "TOWNS",
+          "age_days": 358,
+          "ath": 0.07013,
+          "ath_date": "2025-08-05T05:36:15.000Z",
+          "ath_chg": -97.181,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0x7c94e07bbf73518b0e25d1be200a5b58f46f9dc7",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 0,
+      "symbols": [
+        "XAI"
+      ],
+      "entities": [],
+      "best_ath_chg": -99.62068,
+      "score_hint": 45,
+      "tokens": [
+        {
+          "id": "xai-blockchain",
+          "symbol": "XAI",
+          "age_days": 931,
+          "ath": 1.59,
+          "ath_date": "2024-02-25T08:20:31.000Z",
+          "ath_chg": -99.62068,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "deployer": "0xe74ad5437c6cfb0ccd6badda1f6b57b6e542e75e",
+      "token_count": 1,
+      "pump_count": 1,
+      "match_flows": 0,
+      "symbols": [
+        "SKL"
+      ],
+      "entities": [],
+      "best_ath_chg": -99.70687,
+      "score_hint": 45,
+      "tokens": [
+        {
+          "id": "skale",
+          "symbol": "SKL",
+          "age_days": 2066,
+          "ath": 1.22,
+          "ath_date": "2021-03-11T21:14:18.000Z",
+          "ath_chg": -99.70687,
+          "had_pump": true,
+          "match_count": 0,
+          "status": "ok"
+        }
+      ]
+    }
+  ]
+}

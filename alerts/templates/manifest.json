@@ -1,0 +1,24 @@
+{
+  "version": "1",
+  "defaults": {
+    "CRITICAL": "prep_act",
+    "ACT": "prep_act",
+    "WATCH": "prep_watch",
+    "INFO": "generic_info",
+    "default": "generic_info"
+  },
+  "by_activity_type": {
+    "prep_live": {"CRITICAL": "prep_act", "ACT": "prep_act", "WATCH": "prep_watch"},
+    "prep_new_token_in": {"CRITICAL": "prep_act", "ACT": "prep_act", "WATCH": "prep_watch"},
+    "prep_cex_deposit": {"CRITICAL": "prep_act", "ACT": "prep_act", "WATCH": "prep_watch"},
+    "dwf_inbound": {"ACT": "dwf_inbound", "WATCH": "dwf_inbound", "default": "dwf_inbound"},
+    "graph_act": {"CRITICAL": "graph_act", "ACT": "graph_act", "WATCH": "graph_watch"},
+    "graph_watch": {"WATCH": "graph_watch", "default": "graph_watch"},
+    "intel_spike": {"ACT": "intel_spike", "WATCH": "intel_spike"},
+    "intel_prepump": {"CRITICAL": "intel_prepump", "ACT": "intel_prepump", "WATCH": "intel_prepump"},
+    "rozvidka_critical": {"CRITICAL": "rozvidka_critical", "ACT": "rozvidka_critical"},
+    "rozvidka_watch": {"WATCH": "rozvidka_watch"},
+    "system_stale": {"WATCH": "system_stale", "ACT": "system_stale"},
+    "hub_priority": {"CRITICAL": "intel_prepump", "ACT": "intel_prepump"}
+  }
+}

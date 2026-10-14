@@ -1,0 +1,11 @@
+{
+  "id": "intel_prepump",
+  "title": "{emoji} INTEL · PRE-PUMP · {address_short}",
+  "body_lines": [
+    "score <b>{score}/100</b> · {chain}",
+    "tokens: {token_list}",
+    "touches={touches}",
+    "{reasons_block}"
+  ],
+  "action_line": "<b>→ {action_label}:</b> {action_text}"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "rozvidka_critical",
+  "title": "{emoji} ROZ · {finding_type}",
+  "body_lines": [
+    "<b>{title_line}</b>",
+    "score {score} · {address_short}",
+    "{reasons_block}"
+  ],
+  "action_line": "<b>→ {action_label}:</b> {action_text}"
+}

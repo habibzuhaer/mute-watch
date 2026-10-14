@@ -1,0 +1,11 @@
+{
+  "id": "prep_watch",
+  "title": "{emoji} PREP · СТЕЖИТИ · {symbol}",
+  "body_lines": [
+    "score <b>{score}/100</b> · {chain}",
+    "{wallet_label}",
+    "{reasons_block}",
+    "{explorer_link}"
+  ],
+  "action_line": "<b>→ {action_label}:</b> {action_text}"
+}

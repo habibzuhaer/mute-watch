@@ -1,0 +1,60 @@
+{
+  "entity": "DWF Labs",
+  "updated": "2026-07-24",
+  "notes": [
+    "Official secondary-market wallets disclosed by Andrei Grachev (May 2025).",
+    "Additional EVM addresses from public Arkham/Etherscan labels.",
+    "Add newly discovered related wallets to this file; monitor reloads on restart."
+  ],
+  "wallets": [
+    {
+      "address": "0xF0984860f1F31a784c0FF0bb4d1322e377f97631",
+      "family": "evm",
+      "label": "DWF Labs Official Secondary Market (EVM)",
+      "source": "official-disclosure-2025-05",
+      "priority": 1
+    },
+    {
+      "address": "0xddAcAd3B1edee8E2F5b2e84f658202534fcb0374",
+      "family": "evm",
+      "label": "DWF Labs (Arkham/Etherscan labeled)",
+      "source": "arkham-etherscan-label",
+      "priority": 1
+    },
+    {
+      "address": "0x85336A844A7A7A1B2dB89eF0F8613b7Bf37FFE5B",
+      "family": "evm",
+      "label": "DWF Labs related (Arkham counterparty cluster)",
+      "source": "arkham-activity",
+      "priority": 2
+    },
+    {
+      "address": "0x159A8Bea4efe225d9C81f6Ce79a88856A1FBB047",
+      "family": "evm",
+      "label": "DWF-linked Gnosis Safe (Arkham flow)",
+      "source": "arkham-activity",
+      "priority": 2
+    },
+    {
+      "address": "0x24c460a3cB2332C2AFeCc45a8c0D71cF0a2B45A0",
+      "family": "evm",
+      "label": "DWF-linked EOA (Arkham flow)",
+      "source": "arkham-activity",
+      "priority": 2
+    },
+    {
+      "address": "TR6s2mRQSV2voe5wT2HBGyeNYikDRjKsRb",
+      "family": "tron",
+      "label": "DWF Labs Official Secondary Market (TRON)",
+      "source": "official-disclosure-2025-05",
+      "priority": 1
+    },
+    {
+      "address": "HwDkuDCUipJHHKodBBCjffFvrjhmd4iVVh7fq25fShvt",
+      "family": "solana",
+      "label": "DWF Labs Official Secondary Market (Solana)",
+      "source": "official-disclosure-2025-05",
+      "priority": 1
+    }
+  ]
+}

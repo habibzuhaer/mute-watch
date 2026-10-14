@@ -1,0 +1,41 @@
+================================================================================
+mute — ЗАПУСК (DWF / seed live-монітор)
+================================================================================
+Модуль: mute/  (запуск зі скриптів кореня MUTE)
+
+Що робить
+  Опитує відомі гаманці (DWF Labs тощо), шле Telegram на inbound
+  (або режим prep: obscure IN + CEX OUT).
+
+Потрібно
+  ../.env → TELEGRAM_*, ETHERSCAN_API_KEY
+  ../addresses/dwf_labs.json   (класичний режим)
+  Python venv у корені MUTE: ../.venv
+
+Старт
+  cd ./MUTE
+  ./scripts/start.sh
+  # PID: mute.pid   лог: logs/mute.out
+
+  Або через панель: http://127.0.0.1:8765/ → DWF start
+  Або: ./START.sh   (bootstrap + DWF + dashboard)
+
+Стоп
+  ./scripts/stop.sh
+  # або: kill $(cat mute.pid)
+
+Статус / тест Telegram
+  ./scripts/status.sh
+  ./scripts/test_telegram.sh
+
+Корисні змінні (.env)
+  CHAIN_PROFILE=core|wide|max
+  POLL_PRESET=5m|15m
+  ALERT_MODE=all          # будь-який IN
+  PARALLEL=1  PARALLEL_WORKERS=6
+  MIN_USDT=30000          # фільтр стейблів
+
+Примітка
+  Для pump-prep live використовуй ./scripts/start_prep.sh
+  (окремий процес mute_prep.pid, інший watchlist).
+================================================================================

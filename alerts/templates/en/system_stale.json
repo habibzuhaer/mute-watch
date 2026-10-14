@@ -1,0 +1,8 @@
+{
+  "id": "system_stale",
+  "title": "{emoji} SYSTEM · stale · {process}",
+  "body_lines": [
+    "{detail}"
+  ],
+  "action_line": "<b>→ {action_label}:</b> {action_text}"
+}

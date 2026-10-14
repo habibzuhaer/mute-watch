@@ -1,0 +1,34 @@
+================================================================================
+crypto_funds_tracker — ЗАПУСК
+================================================================================
+Окремий проєкт: таблиця публічних DAT / mid-cap + vol/chg (CoinGecko, ccxt).
+Не залежить від mute/pump_prep процесів, але звіт можна відкрити з панелі MUTE.
+
+Потрібно
+  Інтернет. Arkham API опційно (без ключа VC-блок = н/д).
+
+Старт (один раз — venv)
+  cd ./MUTE/crypto_funds_tracker
+  python3 -m venv .venv
+  source .venv/bin/activate          # Windows: .venv\Scripts\activate
+  pip install -r requirements.txt
+
+Запуск
+  python demo.py                     # синтетика, без ключів
+  python main.py                     # живі дані → out/
+
+Результат
+  out/crypto_funds_report.html
+  out/crypto_funds_data.json
+
+З панелі MUTE (якщо dashboard запущений)
+  http://127.0.0.1:8765/
+  → Reports → MM / crypto_funds_report
+  або: /reports/crypto_funds_report.html
+
+Налаштування
+  config.py → MCAP_MIN_USD / MCAP_MAX_USD, ARKHAM_API_KEY, INCLUDE_DAT_TREASURIES
+
+Стоп
+  Ctrl+C у терміналі (фонового демона немає).
+================================================================================

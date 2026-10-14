@@ -1,0 +1,15 @@
+{
+  "id": "prep_act",
+  "title": "{emoji} PREP · ACT · <b>{symbol}</b>",
+  "body_lines": [
+    "<b>{tier_label}</b> · score <b>{score}/100</b> · {chain}",
+    "{wallet_label} · <code>{address_short}</code>",
+    "{kind}: <b>{amount_fmt} {symbol}</b>",
+    "{direction_line}",
+    "",
+    "<b>{why_label}:</b>",
+    "{reasons_block}",
+    "{explorer_link}"
+  ],
+  "action_line": "<b>→ {action_label}:</b> {action_text}"
+}
